@@ -33,6 +33,8 @@ var config = {
 		],
 		font: [
   		'node_modules/font-awesome/fonts/*.*',
+  		'bower_components/flexslider/fonts/flexslider-icon.woff',
+  		'bower_components/flexslider/fonts/flexslider-icon.ttf'
   	],
   	jslib: [
 			'node_modules/jquery/dist/jquery.min.js',
