@@ -25,6 +25,9 @@ var config = {
 			'node_modules/bootstrap/dist/css/bootstrap.min.css',
 			'node_modules/bootstrap/dist/css/bootstrap-theme.min.css',
 			'node_modules/font-awesome/css/font-awesome.min.css',
+			'bower_components/prettyphoto/css/prettyPhoto.css',
+			'bower_components/animate.css/animate.min.css',
+			'bower_components/FlexSlider/flexslider.css',
 			'./src/css/*.css'
 		],
 		font: [
@@ -78,20 +81,27 @@ gulp.task('image', function() {
 		.pipe(connect.reload());	
 });
 
+gulp.task('css', function() {
+	gulp.src(config.path.css)
+	//	.pipe(concat('lib.css'))
+		.pipe(gulp.dest(config.path.dist + '/css'));
+});
+
 gulp.task('sass', function () {
 	log('sass task starts');
 
   gulp.src(config.path.sass)
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(config.path.src + '/css'));
+    .pipe(gulp.dest(config.path.dist + '/css'))
+    .pipe(connect.reload());
 });
 
-gulp.task('css', ['sass'], function() {
-	gulp.src(config.path.css)
-		.pipe(concat('app-all.css'))
-		.pipe(gulp.dest(config.path.dist + '/css'))
-		.pipe(connect.reload());
-});
+// gulp.task('css', ['sass'], function() {
+// 	gulp.src(config.path.css)
+// 		.pipe(concat('app-all.css'))
+// 		.pipe(gulp.dest(config.path.dist + '/css'))
+// 		.pipe(connect.reload());
+// });
 
 gulp.task('jslib', function() {
 	gulp.src(config.path.jslib)
@@ -114,12 +124,12 @@ gulp.task('js', function (cb) {
 });
 
 gulp.task('watch', function() {
-	gulp.watch(config.path.sass, ['sass', 'css']);
+	gulp.watch(config.path.sass, ['sass']);
 	// gulp.watch(config.path.js, ['js', 'eslint']);
 	gulp.watch(config.path.src + '/**/*.html', ['html']);
 });
 
-gulp.task('default', ['html', 'font', 'image', 'jslib', 'css', 'js', 'open', 'watch']);
+gulp.task('default', ['html', 'font', 'image', 'jslib', 'css', 'sass', 'js', 'open', 'watch']);
 
 
 ///////////
