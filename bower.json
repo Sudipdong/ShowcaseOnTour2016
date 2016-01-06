@@ -1,0 +1,32 @@
+{
+  "name": "ShowcaseOnTour2016",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Berlin Sky <pedroyoung8989@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/BerlinSky/ShowcaseOnTour2016",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery.appear": "*",
+    "animate.css": "~3.5.1",
+    "flexslider": "FlexSlider#~2.6.0",
+    "waypoints": "~4.0.0",
+    "prettyphoto": "*",
+    "jquery.easing": "~1.3.1",
+    "slabText": "https://github.com/freqdec/slabText.git#~2.2.0",
+    "superslides": "https://github.com/nicinabox/superslides.git#~0.6.2",
+    "jquery-parallax": "https://github.com/IanLunn/jQuery-Parallax.git#~1.1.3",
+    "smoothscroll": "https://github.com/galambalazs/smoothscroll-for-websites.git#~1.4.1",
+    "isotope": "~2.2.2",
+    "Modernizr": "https://github.com/Modernizr/Modernizr.git#~3.2.0"
+  }
+}

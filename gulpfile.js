@@ -18,7 +18,8 @@ var config = {
 	devBaseUrl: 'http://localhost',
 	path: {
 		html: './src/*.html',
-		js: './src/**/*.js',
+		// js: './src/**/*.js',
+		js: './src/js/*.js',
 		image: './src/images/*',
 		sass: './src/sass/*.scss',
 		css: [
@@ -35,7 +36,18 @@ var config = {
   	],
   	jslib: [
 			'node_modules/jquery/dist/jquery.min.js',
-			'node_modules/bootstrap/dist/js/bootstrap.min.js'
+			'node_modules/bootstrap/dist/js/bootstrap.min.js',
+			'bower_components/jquery.appear/jquery.appear.js',
+			'bower_components/flexslider/jquery.flexslider-min.js',
+			'bower_components/prettyphoto/js/jquery.prettyPhoto.js',
+			'bower_components/waypoints/lib/jquery.waypoints.min.js',
+			'bower_components/jquery.easing/js/jquery.easing.min.js',
+			'bower_components/slabText/js/jquery.slabtext.min.js',  // produce a super large text
+			'bower_components/superslides/dist/jquery.superslides.min.js',
+			'bower_components/jquery-parallax/scripts/jquery.parallax-1.1.3.js',
+			'bower_components/smoothscroll/SmoothScroll.js',
+			'bower_components/isotope/dist/isotope.pkgd.min.js',
+			'./src/js/vendor/modernizr-latest.js',
   	],
 		src: './src',
 		dist: './dist'
@@ -105,26 +117,34 @@ gulp.task('sass', function () {
 
 gulp.task('jslib', function() {
 	gulp.src(config.path.jslib)
-		.pipe(gulp.dest(config.path.src + '/js/lib'));
+		.pipe(gulp.dest(config.path.dist + '/scripts'));
 });
 
-gulp.task('js', function (cb) {
-  glob(config.path.js, {}, function (err, files) {
-    var b = browserify();
-    files.forEach(function (file) {
-      b.add(file);
-    });
-    b.bundle()
-     .pipe(source('app-all.js'))
-     .pipe(buffer())
-     // .pipe(uglify())
-		 .pipe(gulp.dest(config.path.dist + '/scripts'));
-   cb();
- }); 
+gulp.task('js', function () {
+  gulp.src(config.path.js)
+  	.on('error', console.error.bind(console))
+    .pipe(gulp.dest(config.path.dist + '/scripts'))
+		.pipe(connect.reload());
 });
+// gulp.task('js', function (cb) {
+//   glob(config.path.js, {}, function (err, files) {
+//     var b = browserify();
+//     files.forEach(function (file) {
+//       b.add(file);
+//     });
+//     b.bundle()
+//      .pipe(source('app-all.js'))
+//      .pipe(buffer())
+//      .pipe(uglify())
+// 		 .pipe(gulp.dest(config.path.dist + '/scripts'))
+// 		 .pipe(connect.reload());
+//    cb();
+//  }); 
+// });
 
 gulp.task('watch', function() {
 	gulp.watch(config.path.sass, ['sass']);
+	gulp.watch(config.path.js, ['js']);
 	// gulp.watch(config.path.js, ['js', 'eslint']);
 	gulp.watch(config.path.src + '/**/*.html', ['html']);
 });
