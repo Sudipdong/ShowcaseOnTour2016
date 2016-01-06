@@ -1,4 +1,4 @@
 # exclude bower_components section
 bower_components
 node_modules
-src/npm-debug.log
+npm-debug.log
