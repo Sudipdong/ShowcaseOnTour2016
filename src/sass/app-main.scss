@@ -1,2076 +1,1869 @@
-/* Fonts */
+//colors
+$color_cararra_approx: #ececec;
+$white: #fff;
+$seashell: #f1f1f1;
+$color_alto_approx: #dddddd;
+$color_celeste_approx: #ccc;
+$black: black;
+$color_gallery_approx: #eeeeee;
+$color_mountain_mist_approx: #999999;
+$color_woodsmoke_approx: #111;
+$color_mine_shaft_approx: #333;
+$color_curious_blue_approx: #1a9bd7;
+$color_wild_sand_approx: #f5f5f5;
+$color_emperor_approx: #4d4d4d;
+$black_30: rgba(0, 0, 0, 0.3);
+$white_80: rgba(255,255,255, 0.8);
+$color_pink_swan_approx: #b8b7b7;
+$black_15: rgba(0, 0, 0, 0.15);
+$white_90: rgba(255, 255, 255, 0.9);
+$black_50: rgba(0,0,0, 0.5);
+$black_60: rgba(0,0,0,0.6);
+$white_5: rgba(255, 255, 255, 0.05);
+$color_tapa_approx: #777;
+$color_fuscous_gray_approx: #555555;
+$color_log_cabin_approx: #222;
+$white_97: rgba(255, 255, 255, 0.97);
+$black_25: rgba(0,0,0, 0.25);
+$black_10: rgba(0, 0, 0, 0.1);
+$black_90: rgba(0, 0, 0, 0.9);
+$color_storm_dust_25_approx: rgba(100, 100, 100, 0.25);
+$color_shark_approx: #252525;
+$white_95: rgba(255,255,255,0.95);
+$black_20: rgba(0,0,0,0.2);
+$color_tundora_approx: #444;
+$color_suva_gray_approx: #888;
+$color_storm_dust_approx: #666;
+$mine_shaft_95: rgba(50,50,50,0.95);
+$black_40: rgba(0,0,0, 0.4);
+$color_rangoon_green_approx: #1d1d1d;
+$black_100: rgba(0,0,0,1);
+$color_dove_gray_approx: #727272;
 
-  /* Great Vibes */
-  @import url(http://fonts.googleapis.com/css?family=Great+Vibes);
-  
-  /* Alegreya Sans */
-  @import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:400,300);
-  
-  /* Open Sans */
-  @import url(http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,600,700,800);
+//fonts
+$font_0: Open Sans;
+$font_1: sans-serif;
+$font_2: Alegreya Sans;
+$font_3: Open Sans Condensed;
+$font_4: Great Vibes;
+$font_5: cursive;
 
-  /* Open Sans Condensed */
-  @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
-  
+//urls
+$url_4: url(../images/pattern-white.png);
+$url_5: url(../images/pattern-black.png);
+$url_6: url(../images/ln-bg-dark.jpg);
+$url_7: url(../images/box-03.jpg);
+$url_8: url(../images/box-02.jpg);
+$url_9: url(../images/li-item.png);
+$url_10: url(../images/box-08.jpg);
+$url_11: url(../images/box-07.jpg);
+$url_12: url(../images/box-05.jpg);
+$url_13: url(../images/box-06.jpg);
+$url_14: url(../images/slider-arrows.png);
+$url_15: url(../images/ln-arrow-left.png);
+$url_16: url(../images/ln-arrow-right.png);
+$url_17: url(../images/ln-box-22.jpg);
+$url_18: url(../images/ln-box-23.jpg);
+$url_19: url(../images/white-nav-controls.png);
+$url_20: url(../images/ln-box-25.jpg);
+$url_21: url(../images/ln-milestone.jpg);
+$url_22: url(../images/positive.png);
+$url_23: url(../images/tmot-bio-item-arrow.png);
+$url_24: url(../images/tmot-bio-item-arrow-hover.png);
+$url_25: url(../images/arrow-left.png);
+$url_26: url(../images/arrow-right.png);
 
+//@extend-elements
+//original selectors
+//html, body
+%extend_1 {
+  background: $white;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+  font-family: $font_0, $font_1;
+}
+
+
+@import "http://fonts.googleapis.com/css?family=Great+Vibes";
+@import "http://fonts.googleapis.com/css?family=Alegreya+Sans:400,300";
+@import "http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,600,700,800";
+@import "http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700";
 ::selection {
-  background-color: #ececec;
+  background-color: $color_cararra_approx;
 }
-
-html, body {
-  background: #fff;
-  width:100%;
-  height:100%;
-  padding:0;
-  margin-left:0;
-  margin-right:0;
-  font-family: 'Open Sans', sans-serif;
-  -webkit-font-smoothing: antialiased;
+html {
+  @extend %extend_1;
 }
-
-body{
-  overflow-x: hidden; 
+body {
+  @extend %extend_1;
+  overflow-x: hidden;
 }
-
 img {
-    -moz-user-select: none; 
-    -webkit-user-select: none;
-    -ms-user-select: none; 
-    user-select: none; 
-    -webkit-user-drag: none;
-    user-drag: none;
+  //Instead of the line below you could use @include user-select($select)
+  user-select: none;
+  user-drag: none;
 }
-
-a,
-a:hover,
-a:active,
-a:focus
-{
-  text-decoration:none;
-  outline:none;
-
-}
-
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
-  font-family: 'Alegreya Sans', sans-serif;
-  font-weight:100;
-}
-
-p{
-  margin:0 0 5px;
-}
-
-.clear{
-  clear:both;
-}
-
-ol, ul{
-  list-style:none;
-  padding:0;
-}
-
-b.caret{
-  margin:-3px 0 auto 5px;
-}
-
-.btn{
-  outline:none;
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-  .btn:focus{
-    outline:none;
+a {
+  text-decoration: none;
+  outline: none;
+  &:hover {
+    text-decoration: none;
+    outline: none;
   }
-
-  .btn:active{
-    outline:none;
+  &:active {
+    text-decoration: none;
+    outline: none;
   }
-
-/* Font Classes */  
-
-.condensed{
-  font-family: 'Open Sans Condensed', sans-serif;
-}
-
-.fancy{
-  font-family: 'Great Vibes', cursive;
-}
-
-.animated{
-  visibility:hidden;
-}
-
-.visible{
-  visibility:visible;
-}
-
-@-webkit-keyframes BackgroundAnimation {
-    from {background-position: 0px 0px;}
-    to {background-position: 9600px 0px;}
-}
-
-@-moz-keyframes  BackgroundAnimation {
-    from {background-position: 0px 0px;}
-    to {background-position: 9600px 0px;}
-}
-
-@-ms-keyframes  BackgroundAnimation {
-    from {background-position: 0px 0px;}
-    to {background-position: 9600px 0px;}
-}
-
-  #pagelanding {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top:0;
-    background-color: #f1f1f1;
-    z-index: 9999;
+  &:focus {
+    text-decoration: none;
+    outline: none;
   }
-
-  .pagelanding-zone {
+  &.timeline-image img:hover {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: scale(1.2);
+  }
+}
+h1 {
+  font-family: $font_2, $font_1;
+  font-weight: 100;
+}
+h2 {
+  font-family: $font_2, $font_1;
+  font-weight: 100;
+}
+h3 {
+  font-family: $font_2, $font_1;
+  font-weight: 100;
+}
+h4 {
+  font-family: $font_2, $font_1;
+  font-weight: 100;
+}
+h5 {
+  font-family: $font_2, $font_1;
+  font-weight: 100;
+}
+h6 {
+  font-family: $font_2, $font_1;
+  font-weight: 100;
+}
+.h1 {
+  font-family: $font_2, $font_1;
+  font-weight: 100;
+}
+.h2 {
+  font-family: $font_2, $font_1;
+  font-weight: 100;
+}
+.h3 {
+  font-family: $font_2, $font_1;
+  font-weight: 100;
+}
+.h4 {
+  font-family: $font_2, $font_1;
+  font-weight: 100;
+}
+.h5 {
+  font-family: $font_2, $font_1;
+  font-weight: 100;
+}
+.h6 {
+  font-family: $font_2, $font_1;
+  font-weight: 100;
+}
+p {
+  margin: 0 0 5px;
+}
+.clear {
+  clear: both;
+}
+ol {
+  list-style: none;
+  padding: 0;
+  &.flex-control-nav {
+    bottom: 15px;
     position: absolute;
-    top:47%;
-    left:49%;
-    text-align:center;
-    color:#dddddd;
+    z-index: 2;
   }
-  
-  .pagelanding-zone:before{
-      content: "\f013";
-      font-size:3em;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  &.nav ul.dropdown-menu {
+    padding: 0;
+    margin: 0;
+    border: none;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    background: $white_97;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 1px 4px $black_25;
+    li {
+      width: 100%;
+      height: auto;
+      a {
+        height: auto;
+        padding: 10px;
+        margin: 0;
+        display: block;
+        width: 100%;
+        color: $color_woodsmoke_approx;
+        line-height: 20px;
+        border: none;
+        font-size: 1em;
+      }
     }
-
-  .pagelanding-zone h2{
-    color:#ccc;
-    margin:0 auto;
-    font-size:20px;
   }
-
-  .container {
-    width: 100%;
-    height: auto;
-    padding:0;
-    margin:0;
+  &.dropdown-menu li a:hover {
+    border: none;
+    background: $black_10;
+    color: $color_curious_blue_approx !important;
   }
-
-  .inner{
-    width:100%;
-    height: auto;
-    max-width: 1170px;
-    position: relative;
+}
+.btn {
+  outline: none;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all 0.4s;
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    outline: none;
+  }
+}
+.condensed {
+  font-family: $font_3, $font_1;
+}
+.fancy {
+  font-family: $font_4, $font_5;
+}
+.animated {
+  visibility: hidden;
+}
+.visible {
+  visibility: visible;
+}
+@-webkit-keyframes BackgroundAnimation {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 9600px 0;
+  }
+}
+@-moz-keyframes BackgroundAnimation {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 9600px 0;
+  }
+}
+@-ms-keyframes BackgroundAnimation {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 9600px 0;
+  }
+}
+#pagelanding {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: $seashell;
+  z-index: 9999;
+}
+.pagelanding-zone {
+  position: absolute;
+  top: 47%;
+  left: 49%;
+  text-align: center;
+  color: $color_alto_approx;
+  &:before {
+    content: "\f013";
+    font-size: 3em;
+  }
+  h2 {
+    color: $color_celeste_approx;
     margin: 0 auto;
-    padding: 75px 0;
-    text-align: center;
+    font-size: 20px;
   }
-
-  .inner:after{
+}
+.container {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+.inner {
+  width: 100%;
+  height: auto;
+  max-width: 1170px;
+  position: relative;
+  margin: 0 auto;
+  padding: 75px 0;
+  text-align: center;
+  &:after {
     clear: both;
   }
-
-  .fullwidth{
-    width:100%;
-    max-width: 100%;
-  }
-
-  .transparent{
-    background: transparent !important;
-  }
-
-  .no-padding{
-    padding:0 !important;
-  }
-
-  .no-margin{
-    margin:0 !important;
-  }
-
-  .relative{
-    position: relative;
-  }
-
-  .absolute{
-    position: absolute;
-  }
-
-  .fixed{
-    position:fixed;
-  }
-
-  .pattern-white:after{
-    background: url(../images/pattern-white.png) repeat;
-    content:'';
+}
+.fullwidth {
+  width: 100%;
+  max-width: 100%;
+}
+.transparent {
+  background: transparent !important;
+}
+.no-padding {
+  padding: 0 !important;
+}
+.no-margin {
+  margin: 0 !important;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.header {
+  width: 100%;
+  height: auto;
+  font-size: 3.5em;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 auto;
+}
+.t-left {
+  text-align: left !important;
+}
+.t-center {
+  text-align: center !important;
+}
+.t-right {
+  text-align: right !important;
+}
+.p-right {
+  padding-right: 15px !important;
+}
+.p-left {
+  padding-left: 15px !important;
+}
+.h-desc {
+  font-size: 16px;
+  font-weight: 100;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 900px;
+  line-height: 24px;
+}
+.extrabold {
+  font-weight: 800;
+}
+.bold {
+  font-weight: 700;
+}
+.semibold {
+  font-weight: 600;
+}
+.normal {
+  font-weight: 400;
+}
+.light {
+  font-weight: 100;
+}
+.italic {
+  font-style: italic;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.white {
+  color: $white;
+}
+.black {
+  color: $black;
+}
+.gray1 {
+  color: $color_gallery_approx;
+}
+.gray2 {
+  color: $color_mountain_mist_approx;
+}
+.gray3 {
+  color: $color_woodsmoke_approx;
+}
+.gray4 {
+  color: $color_mine_shaft_approx;
+}
+.colored {
+  color: $color_curious_blue_approx;
+}
+.colored-bg {
+  background-color: $color_curious_blue_approx;
+}
+.gray-border {
+  border-color: $color_gallery_approx;
+}
+.colored-border {
+  border-color: $color_curious_blue_approx;
+}
+.colored-border-left {
+  border-left-color: $color_curious_blue_approx;
+}
+.colored-border-right {
+  border-right-color: $color_curious_blue_approx;
+}
+.white-bg {
+  background-color: $white !important;
+}
+.gray-bg {
+  background-color: $color_wild_sand_approx !important;
+}
+.semidarkgray-bg {
+  background-color: $color_emperor_approx !important;
+}
+.darkgray-bg {
+  background-color: $color_mine_shaft_approx !important;
+}
+.black-bg {
+  background-color: 222222 !important;
+}
+.texture-bg {
+  background: $color_mine_shaft_approx $url_6 repeat;
+}
+#home {
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: 0;
+  .current {
     width: 100%;
     height: 100%;
-    top:0;
-    left:0;
-    position: absolute;
-    opacity:0.25;
-  }
-
-  .pattern-black:after{
-    background: url(../images/pattern-black.png) repeat;
-    content:'';
-    width: 100%;
-    height: 100%;
-    top:0;
-    left:0;
-    position: absolute;
-    opacity:0.25;
-  }
-
-  .transparent{
-    background:transparent !important;
-  }
-
-  .header{
-    width:100%;
-    height: auto;
-    font-size:3.5em;
-    font-weight: 400;
-    text-align: center;
-    margin:0 auto;
-  }
-
-  .t-left{
-    text-align:left !important;
-  }
-
-  .t-center{
-    text-align:center !important;
-  }
-
-  .t-right{
-    text-align:right !important;
-  }
-  
-  .p-right{
-    padding-right:15px !important;
-  }
-  
-  .p-left{
-    padding-left:15px !important;
-  }
-
-  .h-desc{
-    font-size:16px;
-    font-weight: 100;
-    text-align: center;
-    margin:20px auto;
-    max-width: 900px;
-    line-height: 24px;
-  }
-
-  .extrabold{
-    font-weight: 800;
-  }
-
-  .bold{
-    font-weight: 700;
-  }
-
-  .semibold{
-    font-weight: 600;
-  }
-
-  .normal{
-    font-weight: 400;
-  }
-
-  .light{
-    font-weight: 100;
-  }
-
-  .italic{
-    font-style: italic;
-  }
-
-  .uppercase{
-    text-transform: uppercase;
-  }
-
-  .white{
-    color:white;
-  }
-  
-  .black{
-    color:black;
-  }
-
-  .gray1{
-    color:#eeeeee;
-  }
-
-  .gray2{
-    color:#999999;
-  }
-  
-  .gray3{
-    color:#111;
-  }
-
-  .gray4{
-    color:#333;
-  }
-
-  .colored{
-    color: #1a9bd7;
-  }
-
-  .colored-bg{
-    background-color: #1a9bd7;
-  }
-
-  .gray-border{
-    border-color:#eeeeee;
-  }
-
-  .colored-border{
-    border-color: #1a9bd7;
-  }
-
-  .colored-border-left{
-    border-left-color: #1a9bd7;
-  }
-
-  .colored-border-right{
-    border-right-color: #1a9bd7;
-  }
-
-  .white-bg{
-    background-color:white !important;
-  }
-
-  .gray-bg{
-    background-color:#f5f5f5 !important;
-  }
-  
-  .semidarkgray-bg{
-    background-color:#4d4d4d !important;
-  }
-  
-  .darkgray-bg{
-    background-color:#333333 !important;
-  }
-
-  .black-bg{
-    background-color:222222 !important;
-  }
-  
-  .texture-bg{
-    background:#333 url(../images/ln-bg-dark.jpg) repeat;
-  }
-
-  #home{
-    position: relative;
-    width: 100%;
-    height: auto;
-    top:0;
-  }
-
-  .home{
-    background:url(../images/box-03.jpg) center center fixed;
-    position: relative;
-  }
-
-  .home:after{
-    clear: both;
-  }
-
-  .home-animated{
-    background-image:url(../images/box-02.jpg);
-    background-size: cover;
-    background-position: 50% 50%;
-    background-attachment: fixed !important;
-    background-repeat: repeat;
-    -webkit-animation: BackgroundAnimation 300s linear infinite;
-    -moz-animation: BackgroundAnimation 300s linear infinite;
-       -ms-animation: BackgroundAnimation 300s linear infinite;
-  }
-
-  .hometexts-1{
-    font-size:75px;
-    height:auto;
-    color:white;
-    line-height: 85px;
-  }
-
-  .hometexts-1 .slide-text-1{
-    margin-bottom:0;
-    margin-top:0.5em;
-    width:auto;
-    padding:0;
-  }
-
-  .home-button{
-    display:inline-block;
-    background:rgba(0, 0, 0, 0.3);
-    border:1px solid rgba(0,0,0, 0.3);
-    padding:9px 22px;
-    margin:0 5px;
-    font-size:12px;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
-    color:#dadada;
-  }
-
-  .home-button:hover{
-    border:1px solid rgba(255,255,255, 0.8);
-    background:rgba(255,255,255, 0.8);
-    color:black;
-  }
-
-  .home-details{
-    width:90%;
-    margin:0 auto;
-    height: auto;
-    max-width: 1170px;
-    top:50%;
-    position: relative;
-    text-align:center;
-    z-index: 10;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-
-  .slide-text{
-    margin:3px auto 0;
-  }
-
-  .slide-text li:last-child{
-    clear: both;
-  }
-
-  .hometext{
-    width:100%;
-    height: auto;
-    color:white;
-    font-size:125px;
-    line-height: 110px; 
-  }
-
-  .fixed-text{
-    font-size: 66px;
-    color:#ffffff;
-    margin:0;
-  }
-
-  .home-categories .h-item:last-child{
-    background:none;
-  }
-
-  .h-item{
-    color:#eeeeee;
-    padding:5px 20px 5px 13px;
-    width: auto;
-    font-size: 13px;
-    background:url(../images/li-item.png) right center no-repeat;
-    display: inline-block;
-  }
-
-  .home-arrow{
-    display: block;
-    color:#b8b7b7;
-    width:150px;
-    margin:10px auto;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
-  }
-
-  .home-arrow span{
-    display: block;
-    margin:5px auto;
-  }
-
-  .home-arrow:hover{
-    color:white;
-  }
-
-  #home .current{
-    width:100%;
-    height: 100%;
-    top:0;
+    top: 0;
     z-index: 4;
     text-align: center;
+    .typographic {
+      height: auto;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+      top: 50%;
+      padding: 0 25px;
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: translateY(-50%);
+      .logo {
+        padding: 25px 0;
+      }
+      h1 {
+        //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        text-shadow: 2px 2px 2px $black_15;
+        line-height: 0.8;
+        font-size: 70%;
+        margin: 10px 0;
+      }
+      h2 {
+        //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        text-shadow: 2px 2px 2px $black_15;
+        line-height: 0.9;
+        font-size: 80%;
+        margin: 10px 0;
+      }
+    }
   }
-
-  #home .current .typographic{
-    height: auto;
-    width:100%;
-    max-width:600px;
-    margin:0 auto;
-    position: relative;
-    top:50%;
-    padding:0 25px;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    transform: translateY(-50%);
+  &:hover .slides-navigation a {
+    opacity: 0.3;
   }
-  
-  #home .current .typographic .logo{
-    padding:25px 0;
-  }
-
-  #home .current .typographic h1{
-    text-shadow:2px 2px 2px rgba(0, 0, 0, 0.15);
-    line-height:0.8;
-    font-size:70%;
-    margin:10px 0;
-  }
-
-  #home .current .typographic h2{
-    text-shadow:2px 2px 2px rgba(0, 0, 0, 0.15);
-    line-height: 0.9;
-    font-size:80%;
-    margin:10px 0;
-  }
-
-  
-
-  .home-details-tb{
-    width:100%;
-    margin:0 auto;
-    height: auto;
-    top:50%;
-    text-align:center;
-    z-index: 10;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-
-  .home-details-tb .home-details-inner{
-    max-width: 90%;
-    margin:0 auto;
-  }
-
-  .slides-container div,
-  .home{
-    background-size:100%;
-  }
-
-  #slides .slides-container div{
-    background-position:center center;
-    background-attachment: fixed;
-  }
-
-  #slides .slides-container .image1{
-    background-image:url(../images/box-08.jpg);
-  }
-
-  #slides .slides-container .image2{
-    background-image:url(../images/box-07.jpg);
-  }
-  
-  #slides .slides-container .image3{
-    background-image:url(../images/box-05.jpg);
-  }
-  
-  #slides .slides-container .image4{
-    background-image:url(../images/box-06.jpg);
-  }
-
-  .current .home-arrow{
-    margin:0 auto;
-    left:50%;
-    bottom:12%;
-    position: absolute;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    transform: translateX(-50%);
-  }
-
-  .current .home-arrow:hover{
-    color:white;
-  }
-
-  .slides-navigation {
-    margin: 0 auto;
-    position: absolute;
-    z-index: 3;
-    top: 45%;
-    width: 100%;
-    z-index: 20;
-  }
-  .slides-navigation a{
-    position: absolute;
-    display: block;
-    width:36px;
-    height:81px;
-    background:url(../images/slider-arrows.png);
-    opacity:0;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
-  }
-
-  .slides-navigation a.prev {
-    left: 2%;
-    background-position:left;
-    cursor: url('../images/ln-arrow-left.png'), default;
-  }
-  .slides-navigation a.next {
-    right: 2%;
-    background-position:right;
-    cursor: url('../images/ln-arrow-right.png'), default;
-  }
-
-  #home:hover .slides-navigation a{
-    opacity:0.3;
-  }
-
-  .slides-navigation a:hover{
-    opacity:1 !important;
-  }
-
-  #navigation{
-    position: fixed;
-    width: 100%;
-    height: 75px;
-    z-index: 1031;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
-  }
-
-  .not-visible-nav{
-    
-  }
-
-  .visible-nav{
-    top:0;
-  }
-
-  .white-nav{
-    background:rgba(255, 255, 255, 0.9);
-    box-shadow: 0px 1px 4px rgba(0,0,0, 0.5);
-    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.5);
-    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.5);
-  }
-
-  .dark-nav{
-    background:rgba(0,0,0,0.6);
-    box-shadow: 0px 1px 4px rgba(0,0,0, 0.5);
-    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.5);
-    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.5);
-  }
-
-  .soft-nav{
-    background:rgba(255, 255, 255, 0.05);
-  }
-
-  .nav-inner{
-    width:100%;
-    max-width: 1170px;
-    height: 100%;
-    margin:0 auto;
-  }
-
-  .nav-inner:after{
+}
+.home {
+  background: $url_7 center center fixed;
+  position: relative;
+  background-size: 100%;
+  &:after {
     clear: both;
   }
-
-  .site-logo{
-    font-size:3.5em;
-    float: left;
-    position: relative;
-    padding-top:8px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    transform: translateY(-50%);
+}
+.home-animated {
+  background-image: $url_8;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed !important;
+  background-repeat: repeat;
+}
+.hometexts-1 {
+  font-size: 75px;
+  height: auto;
+  color: $white;
+  line-height: 85px;
+  .slide-text-1 {
+    margin-bottom: 0;
+    margin-top: 0.5em;
+    width: auto;
+    padding: 0;
   }
-
-  .white-nav .site-logo a.logo{
-    color:#111;
-    display: block;
-  } 
-  
-  .dark-nav .site-logo a.logo{
-    color:#fff;
-    display: block;
-  } 
-
-  .site-logo a.logo img{
-    height: auto;
-    max-height: 189px;
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    transition: all 1s;
+}
+.home-button {
+  display: inline-block;
+  background: $black_30;
+  border: 1px solid $black_30;
+  padding: 9px 22px;
+  margin: 0 5px;
+  font-size: 12px;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all 0.5s;
+  color: $color_alto_approx;
+  &:hover {
+    border: 1px solid $white_80;
+    background: $white_80;
+    color: $black;
   }
-
-  #navigation .mini-nav-button{
-    color:#777;
+}
+.home-details {
+  width: 90%;
+  margin: 0 auto;
+  height: auto;
+  max-width: 1170px;
+  top: 50%;
+  position: relative;
+  text-align: center;
+  z-index: 10;
+  //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  transform: translateY(-50%);
+}
+.slide-text {
+  margin: 3px auto 0;
+  li:last-child {
+    clear: both;
+  }
+}
+.hometext {
+  width: 100%;
+  height: auto;
+  color: $white;
+  font-size: 125px;
+  line-height: 110px;
+}
+.fixed-text {
+  font-size: 66px;
+  color: $white;
+  margin: 0;
+}
+.h-item {
+  color: $color_gallery_approx;
+  padding: 5px 20px 5px 13px;
+  width: auto;
+  font-size: 13px;
+  background: $url_9 right center no-repeat;
+  display: inline-block;
+}
+.home-arrow {
+  display: block;
+  color: $color_pink_swan_approx;
+  width: 150px;
+  margin: 10px auto;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all 0.5s;
+  span {
+    display: block;
+    margin: 5px auto;
+  }
+  &:hover {
+    color: $white;
+  }
+}
+.home-details-tb {
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  top: 50%;
+  text-align: center;
+  z-index: 10;
+  //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  transform: translateY(-50%);
+  .home-details-inner {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+.slides-navigation {
+  margin: 0 auto;
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  z-index: 20;
+  a {
+    position: absolute;
+    display: block;
+    width: 36px;
+    height: 81px;
+    background: $url_14;
+    opacity: 0;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 0.5s;
+    &.prev {
+      left: 2%;
+      background-position: left;
+      cursor: $url_15, default;
+    }
+    &.next {
+      right: 2%;
+      background-position: right;
+      cursor: $url_16, default;
+    }
+    &:hover {
+      opacity: 1 !important;
+    }
+  }
+}
+#navigation {
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  z-index: 1031;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all 0.5s;
+  .mini-nav-button {
+    color: $color_tapa_approx;
     display: none;
     width: 40px;
     height: 40px;
     text-align: center;
-    font-size:25px;
+    font-size: 25px;
     position: absolute;
-    right:15px;
-    top:50%;
+    right: 15px;
+    top: 50%;
     cursor: pointer;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
     transform: translateY(-50%);
+    &:hover {
+      color: $color_curious_blue_approx;
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.3s;
+    }
   }
-  
-  #navigation .mini-nav-button:hover{
-    color:#1a9bd7;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-  } 
-
-  .nav-menu{
-    float: right;
-    height: 100%;
+}
+.not-visible-nav {
+}
+.visible-nav {
+  top: 0;
+}
+.white-nav {
+  background: $white_90;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 1px 4px $black_50;
+  li {
+    a {
+      &:hover {
+        background: $color_alto_approx;
+        color: $color_curious_blue_approx;
+      }
+      &:focus {
+        background: $color_curious_blue_approx;
+        color: $white !important;
+      }
+    }
+    &.active a {
+      color: $color_curious_blue_approx;
+    }
   }
-
-  .nav-menu ul.nav{
-    height: 100%;
-  }
-
-  .nav li{
-    display: inline-block;
-    height: 100%;
-  }
-
-  .nav li a{
+  .site-logo a.logo {
+    color: $color_woodsmoke_approx;
     display: block;
-    height: 100%;
-    line-height: 54px;
-    color: #555555;
-    font-size:1.05em;
-    font-weight:600;
-    padding:10px 8px;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    font-family: 'Open Sans', sans-serif;
   }
-
-  .white-nav li a:hover{
-    background:#ddd;    
-    color:#1a9bd7;
+}
+.dark-nav {
+  background: $black_60;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 1px 4px $black_50;
+  ul {
+    &.dropdown-menu {
+      background: $black_90 !important;
+      li a {
+        color: $white;
+        &:hover {
+          border: none;
+          background: $color_storm_dust_25_approx;
+        }
+      }
+    }
+    &.nav ul.dropdown-menu li a {
+      color: $color_celeste_approx;
+    }
   }
-
-  .white-nav li.active a{
-    color:#1a9bd7;
-  }
-
-  .white-nav li a:focus{
-    background:#1a9bd7;
-    color:#fff !important;
-  }
-
-  .dark-nav .nav li a{
-    color:#ccc;
-  }
-
-  .dark-nav .nav li a:hover{
-    background:#222;
-    color:#1a9bd7;
-  }
-  
-  .dark-nav .nav li.active a{
-    color:#1a9bd7;
-  }
-  
-  .dark-nav .nav li a:focus{
-    background:#1a9bd7;
-    color:#fff !important;
-  } 
-
-  ul.nav ul.dropdown-menu{
-    padding:0;
-    margin:0;
-    border:none;
-    border-radius: 0;
-    background:rgba(255, 255, 255, 0.97);
-    box-shadow: 0px 1px 4px rgba(0,0,0, 0.25);
-    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.25);
-    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.25);
-  }
-
-  ul.nav ul.dropdown-menu li{
-    width: 100%;
-    height: auto;   
-  }
-
-  ul.nav ul.dropdown-menu li a{
-    height: auto;
-    padding: 10px;
-    margin:0;
+  .site-logo a.logo {
+    color: $white;
     display: block;
-    width: 100%;
-    color:#111;
-    line-height: 20px;
-    border:none;
-    font-size:1em;
   }
-
-  ul.dropdown-menu li a:hover{
-    border:none;
-    background:rgba(0, 0, 0, 0.1);
-    color: #1a9bd7 !important;
+  .nav li {
+    a {
+      color: $color_celeste_approx;
+      &:hover {
+        background: $color_log_cabin_approx;
+        color: $color_curious_blue_approx;
+      }
+      &:focus {
+        background: $color_curious_blue_approx;
+        color: $white !important;
+      }
+    }
+    &.active a {
+      color: $color_curious_blue_approx;
+    }
   }
-  
-  .dark-nav ul.nav ul.dropdown-menu li a{
-    color:#ccc;
-  } 
-
-  .dark-nav ul.dropdown-menu{
-    background:rgba(0, 0, 0, 0.9) !important;
-  }
-
-  .dark-nav ul.dropdown-menu li a{
-    color:white;
-  }
-
-  .dark-nav ul.dropdown-menu li a:hover{
-    border:none;
-    background:rgba(100, 100, 100, 0.25);
-  }
-
-/* About */
-  
-  #bio .inner .boxes{
-    overflow: hidden;
-  }
-
-  #bio .inner .boxes:after{
+}
+.soft-nav {
+  background: $white_5;
+}
+.nav-inner {
+  width: 100%;
+  max-width: 1170px;
+  height: 100%;
+  margin: 0 auto;
+  &:after {
     clear: both;
   }
-
-  .bio-box{
-    text-align: center;
-    margin:0px auto 0;
-    cursor: pointer;
+}
+.site-logo {
+  font-size: 3.5em;
+  float: left;
+  position: relative;
+  padding-top: 8px;
+  top: 50%;
+  //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  transform: translateY(-50%);
+  a.logo img {
+    height: auto;
+    max-height: 189px;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 1s;
   }
-
-  .bio-icon{
-    display:block;
-    width:120px;
-    height: 120px;
-    position: relative;
-    border-radius:50%;
-    z-index: 3;
-    margin:1px auto;
-    text-align: center;
+}
+.nav-menu {
+  float: right;
+  height: 100%;
+  ul.nav {
+    height: 100%;
   }
-
-  .bio-icon:before{
-    width:120px;
+}
+.bio-box {
+  text-align: center;
+  margin: 0 auto 0;
+  cursor: pointer;
+  .bio-head {
+    margin: 25px auto 20px;
+    font-size: 1.5em;
+    border-top: $color_alto_approx 1px solid;
+    padding-top: 20px;
+  }
+  .bio-text {
+    font-size: 13px;
+  }
+  &:hover .bio-icon {
+    &:before {
+      background: $color_shark_approx;
+    }
+    &:after {
+      background: $color_shark_approx;
+    }
+    i {
+      color: $white;
+    }
+  }
+}
+.bio-icon {
+  display: block;
+  width: 120px;
+  height: 120px;
+  position: relative;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 50%;
+  z-index: 3;
+  margin: 1px auto;
+  text-align: center;
+  &:before {
+    width: 120px;
     height: 120px;
-    content:'';
+    content: '';
     z-index: 1;
     position: absolute;
-    background: #1a9bd7;    
+    background: $color_curious_blue_approx;
     border: none;
-    border-radius:50%;
-    top:-1px;
-    left:-1px;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 50%;
+    top: -1px;
+    left: -1px;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
     transition: all 0.3s;
   }
-
-  .bio-icon i{
-    font-size:4em;
-    color:#fff;
+  i {
+    font-size: 4em;
+    color: $white;
     z-index: 4;
     position: relative;
     line-height: 120px;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
     transition: all 0.3s;
   }
-
-
-  .bio-box:hover .bio-icon:before{
-    background:#252525;
-  }
-
-  .bio-box:hover .bio-icon:after{
-    background:#252525;
-  }
-
-  .bio-box:hover .bio-icon i{
-    color:#fff;
-  }
-
-  .bio-box .bio-head{
-    margin:25px auto 20px;
-    font-size:1.5em;
-    border-top:#ddd 1px solid;
-    padding-top:20px;
-  }
-
-  .bio-box .bio-text{
-    font-size:13px;
-  }
-
-
-  #tmot-more-info{
-    background:url(../images/ln-box-22.jpg) top center fixed;
-    padding:55px 0;
-    overflow: hidden;
-  }
-
-  .tmot-more-info-item-box{
-    text-align: center;
-    margin:50px auto 0;
-    cursor: context-menu;
-  }
-
-  .tmot-more-info-item-box .tmot-more-info-item-icon{
-    display:block;
+}
+#tmot-more-info {
+  background: $url_17 top center fixed;
+  padding: 55px 0;
+  overflow: hidden;
+}
+.tmot-more-info-item-box {
+  text-align: center;
+  margin: 50px auto 0;
+  cursor: context-menu;
+  .tmot-more-info-item-icon {
+    display: block;
     position: relative;
     z-index: 3;
-    margin:0 auto;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
+    margin: 0 auto;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
     transition: all 0.3s;
+    i {
+      font-size: 26px;
+      color: $white;
+      width: 70px;
+      height: 70px;
+      z-index: 4;
+      position: relative;
+      line-height: 60px;
+      background-color: $color_curious_blue_approx;
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 50%;
+      border: $black_10 5px solid;
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.3s;
+    }
   }
-
-  .tmot-more-info-item-box .tmot-more-info-item-icon i{
-    font-size:26px;
-    color:white;
-    width:70px;
-    height: 70px;
-    z-index: 4;
+  .tmot-more-info-item-header {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: 0 1px $black;
+    font-weight: bold;
+  }
+  &:hover .tmot-more-info-item-icon i {
+    background: $black;
+  }
+}
+.tooltip {
+  z-index: 999 !important;
+  &.top {
+    margin-top: -10px;
+    .tooltip-arrow {
+      border-top-color: $white_95 !important;
+    }
+  }
+  &.bottom {
+    margin-top: 20px;
+    .tooltip-arrow {
+      border-bottom-color: $white_95 !important;
+    }
+  }
+  &.left {
+    margin-right: 20px;
+    .tooltip-arrow {
+      border-left-color: $white_95 !important;
+    }
+  }
+  &.right {
+    margin-left: 20px;
+    .tooltip-arrow {
+      border-right-color: $white_95 !important;
+    }
+  }
+}
+.tooltip-inner {
+  padding: 15px;
+  background: $white_95;
+  color: $black;
+  font-size: 13px;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 3px;
+  min-width: 170px;
+}
+.f-box {
+  text-align: center;
+  cursor: default;
+  margin: 60px auto 0;
+  .feature-head {
+    margin: 25px auto 20px;
+    font-size: 1.5em;
+    border-top: $color_tundora_approx 1px solid;
+    padding-top: 20px;
+    color: $color_celeste_approx;
+  }
+  .feature-text {
+    font-size: 14px;
+    color: $color_suva_gray_approx;
+    line-height: 22px;
+  }
+  &:hover .f-icon i {
+    background: $color_woodsmoke_approx;
+  }
+}
+#features {
+  background: $color_mine_shaft_approx $url_6 repeat;
+}
+.static-content-02 {
+  background: $url_18 center center fixed;
+  padding: 70px 0;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  .flex-direction-nav {
+    width: 52px;
+    height: 300px;
+    margin: -35px auto 0 auto;
     position: relative;
-    line-height: 60px;
-    background-color:#1a9bd7;
-    border-radius:50%;
-    border:rgba(0,0,0,0.10) 5px solid;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
+    opacity: 1;
+    li {
+      display: block;
+      position: relative;
+      float: left;
+      width: 26px;
+      height: 26px;
+      a {
+        opacity: 1;
+        width: 26px;
+        height: 26px;
+        background: $url_19;
+        &.flex-prev {
+          background-position: left top;
+          left: -5px;
+          &:hover {
+            background-position: left bottom;
+          }
+        }
+        &.flex-next {
+          background-position: right top;
+          right: -5px;
+          &:hover {
+            background-position: right bottom;
+          }
+        }
+      }
+    }
+    a:before {
+      display: none;
+    }
   }
-
-  .tmot-more-info-item-box:hover .tmot-more-info-item-icon i{
-    background:black;
-  }
-
-  .tmot-more-info-item-box .tmot-more-info-item-header{
-    margin-top:15px;
-    margin-bottom:30px;
-    font-size:18px;
-    text-shadow: 0px 1px #000000;
-    font-weight:bold;
-  }
-
-  .tooltip{
-    z-index: 999 !important;
-  }
-
-  .tooltip-inner{
-    padding:15px;
-    background:rgba(255,255,255,0.95);
-    color:black;
-    font-size:13px;
-    border-radius: 3px;
-    min-width: 170px;
-  }
-
-  .tooltip.top{
-    margin-top:-10px;
-
-  }
-
-  .tooltip.bottom{
-    margin-top:20px;
-
-  }
-
-  .tooltip.left{
-    margin-right:20px;
-
-  }
-
-  .tooltip.right{
-    margin-left:20px;
-  }
-
-  .tooltip.top .tooltip-arrow{
-    border-top-color:rgba(255,255,255,0.95) !important;
-  }
-
-  .tooltip.bottom .tooltip-arrow{
-    border-bottom-color:rgba(255,255,255,0.95) !important;
-  }
-
-  .tooltip.left .tooltip-arrow{
-    border-left-color:rgba(255,255,255,0.95) !important;
-  }
-
-  .tooltip.right .tooltip-arrow{
-    border-right-color:rgba(255,255,255,0.95) !important;
-  }
-
-  .f-box{
-    text-align:center;
-    cursor: default;
-    margin:60px auto 0;
-  }
-
-  .f-icon i{
-    font-size:3em;
-    color:#fff;
-    background:#1a9bd7;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    border:rgba(0,0,0,0.2) 5px solid;
-    border-radius:50%;
-    padding:30px;
-    width:110px;
-  }
-
-  .f-box .feature-head{
-    margin:25px auto 20px;
-    font-size:1.5em;
-    border-top:#444 1px solid;
-    padding-top:20px;
-    color:#ccc;
-  }
-
-  .f-box .feature-text{
-    font-size:14px;
-    color:#888;
-    line-height:22px;
-  }
-
-  .f-box:hover .f-icon i{
-    background:#111;
-  }
-  
-  #features{
-    background:#333 url(../images/ln-bg-dark.jpg) repeat;
-  }
-
-  .static-content-02{
-    background: url(../images/ln-box-23.jpg) center center fixed;
-    padding: 70px 0 70px;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .t-slides{
-    max-width: 970px;
-    margin:0 auto;
-    max-height: 500px;
-    overflow: hidden;
-    background:none;
-  }
-
-  .t-slides li.tmot-memo-box{
+}
+.t-slides {
+  max-width: 970px;
+  margin: 0 auto;
+  max-height: 500px;
+  overflow: hidden;
+  background: none;
+  li.tmot-memo-box {
     position: absolute;
     height: auto;
-    
+    &:last-child:after {
+      clear: both;
+    }
   }
-
-  .t-slides li.tmot-memo-box:last-child:after{
-    clear: both;
+}
+.tmot-memo-box {
+  h1 {
+    font-size: 2em;
+    line-height: 1.5em;
   }
-
-  .tmot-memo-box h1{
-    font-size:2em;
-    line-height:1.5em;
-  }
-
-  .tmot-memo-box p{
-    margin:20px 20px;
-    font-size:18px;
-    color: #666;
+  p {
+    margin: 20px;
+    font-size: 18px;
+    color: $color_storm_dust_approx;
     text-align: right;
   }
-
-  .static-content-02 .flex-direction-nav{
-    width:52px;
-    height: 300px;
-    margin:-35px auto 0 auto;
-    position: relative;
-    opacity: 1;
+}
+#callout {
+  padding: 55px 0;
+  background: $color_mine_shaft_approx $url_6 repeat;
+  h1 {
+    color: $white;
   }
-
-  .static-content-02 .flex-direction-nav li{
-    display: block;
-    position: relative;
-    float:left;
-    width:26px;
-    height: 26px;
+  p {
+    color: $color_suva_gray_approx;
   }
-
-  .static-content-02 .flex-direction-nav li a{
-    opacity: 1;
-    width:26px;
-    height: 26px;
-    background:url(../images/white-nav-controls.png);
+}
+#blockquote {
+  background: $color_curious_blue_approx;
+  padding: 45px 0 35px;
+  border-top: $black_10 8px solid;
+  border-bottom: $black_10 8px solid;
+  p.blockquote {
+    font-size: 44px;
   }
-
-  .static-content-02 .flex-direction-nav a:before{
-    display: none;
+  i.fa {
+    padding-left: 40px;
   }
-
-  .static-content-02 .flex-direction-nav li a.flex-prev{
-    background-position: left top;
-    left:-5px;
-  }
-
-  .static-content-02 .flex-direction-nav li a.flex-next{
-    background-position: right top;
-    right:-5px;
-  }
-
-  .static-content-02 .flex-direction-nav li a.flex-prev:hover{
-    background-position: left bottom;
-  }
-
-  .static-content-02 .flex-direction-nav li a.flex-next:hover{
-    background-position: right bottom;
-  }
-
-  #callout{
-    padding:55px 0;
-    background:#333 url(../images/ln-bg-dark.jpg) repeat;
-  }
-  
-  #callout h1{
-    color:#fff;
-  }
-  
-  #callout p{
-    color:#888;
-  }
-
-  #blockquote{
-    background:#1a9bd7;
-    padding:45px 0 35px 0;
-    border-top:rgba(0,0,0,0.10) 8px solid;
-    border-bottom:rgba(0,0,0,0.10) 8px solid;
-  }
-
-  #blockquote p.blockquote{
-    font-size:44px;
-  }
-  
-  #blockquote i.fa{
-    padding-left:40px;
-  } 
-
-  #biolist{
-    background:url(../images/ln-box-25.jpg) top fixed;
-  }
-
-  .biolist{
-    padding-bottom:0;
-  }
-
-  #biolist ul.timeline{
+}
+#biolist {
+  background: $url_20 top fixed;
+  ul.timeline {
     width: 100%;
-    max-width:1170px;
-    margin:50px auto 0;
+    max-width: 1170px;
+    margin: 50px auto 0;
     display: block;
-    background:url(../images/ln-milestone.jpg) center center repeat-y;
+    background: $url_21 center center repeat-y;
     position: relative;
     height: auto;
-    padding:0 0 150px;
+    padding: 0 0 150px;
+    li {
+      &.time {
+        width: 75px;
+        height: 75px;
+        position: relative;
+        clear: both;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 50%;
+        background: $color_log_cabin_approx;
+        text-align: center;
+        color: $white;
+        line-height: 75px;
+        font-size: 20px;
+        margin: 30px auto;
+        cursor: default;
+        + li.note {
+          margin-top: -5px;
+        }
+      }
+      &.today {
+        background: $color_curious_blue_approx;
+        color: $white;
+        margin: 40px auto;
+      }
+      &.note {
+        width: 46%;
+        min-height: 100px;
+        float: right;
+        background: $mine_shaft_95;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 1px 4px $black_40;
+        border: none;
+        margin: 35px 0;
+        position: relative;
+        text-align: left;
+        padding: 24px;
+        cursor: pointer;
+        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: all 0.3s;
+        .button {
+          font-size: 13px;
+          font-weight: 600;
+          background-color: $color_curious_blue_approx;
+          //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+          box-shadow: 0 1px 4px $black_10;
+          &:hover {
+            background-color: $color_mine_shaft_approx;
+          }
+          i {
+            padding: 0 0 0 4px;
+            font-size: 14px;
+          }
+        }
+        img {
+          width: 100%;
+        }
+        &:nth-of-type(2n) {
+          float: left;
+          clear: left;
+          &:after {
+            right: -8.6%;
+            left: auto;
+          }
+          .note-arrow {
+            left: 100%;
+            right: auto;
+            border-left: 0 solid;
+            border-left-color: rgba(0,0,0,0);
+            border-right: none;
+            &:after {
+              border-left: 0 solid;
+              border-left-color: rgba(0,0,0,0);
+              border-top: 0 solid transparent;
+              border-bottom: 0 solid transparent;
+              border-right: none;
+              right: 1px;
+              left: auto;
+            }
+          }
+          .timeline-images a.timeline-image {
+            float: right;
+            margin-left: 15px;
+            margin-right: 0;
+          }
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          left: -8.7%;
+          right: auto;
+          display: block;
+          width: 50px;
+          height: 1px;
+          background: $color_log_cabin_approx;
+          top: 50%;
+          z-index: 20;
+          //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+          transform: translateY(-50%);
+          //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+          transition: all 0.3s;
+        }
+        &:hover {
+          span.note-arrow {
+            border-right-color: $color_curious_blue_approx;
+            &:after {
+              border-right-color: $color_curious_blue_approx;
+            }
+          }
+          &:nth-of-type(2n) span.note-arrow {
+            border-left-color: $color_curious_blue_approx;
+            &:after {
+              border-left-color: $color_curious_blue_approx;
+            }
+          }
+        }
+      }
+      &.start {
+        clear: both;
+        width: 60px;
+        height: 60px;
+        display: block;
+        position: absolute;
+        left: 50%;
+        margin-left: -30px;
+        margin-bottom: -30px;
+        bottom: 0;
+        background: $color_curious_blue_approx;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 50%;
+        a {
+          width: 60px;
+          height: 60px;
+          display: block;
+          color: $white;
+          font-size: 2em;
+          line-height: 55px;
+          text-align: center;
+          //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+          border-radius: 50%;
+          //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+          transition: all 0.3s;
+          &:hover {
+            background: $black;
+          }
+        }
+      }
+    }
   }
-
-  #biolist ul.timeline li.time{
-    width: 75px;
-    height: 75px;
-    position: relative;
-    clear: both;
-    border-radius: 50%;
-    background:#222222;
-    text-align: center;
-    color:white;
-    line-height: 75px;
-    font-size: 20px;
-    margin:30px auto;
-    cursor: default;
-  }
-
-  #biolist ul.timeline li.today{
-    background: #1a9bd7;
-    color:white;
-    margin:40px auto;
-  }
-
-  #biolist ul.timeline li.note{
-    width:46%;
-    min-height: 100px;
-    float:right;
-    background:rgba(50,50,50,0.95);
-    box-shadow: 0px 1px 4px rgba(0,0,0, 0.4);
-    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.4);
-    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.4);
-    border:none;
-    margin:35px 0;
-    position: relative;
-    text-align:left;
-    padding:24px 24px 24px;
-    cursor:pointer;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-  
-  #biolist ul.timeline li.note .button{
-    font-size:13px;
-    font-weight:600;
-    background-color:#1a9bd7;
-    box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
-    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
-    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
-  }
-  
-  #biolist ul.timeline li.note .button:hover{
-    background-color:#333;
-  }
-  
-  #biolist ul.timeline li.note .button i{
-    padding:0px 0px 0px 4px;
-    font-size:14px;
-  }
-  
-  #biolist ul.timeline li.note img{
-    width:100%;
-  }
-
-  #biolist ul.timeline li.note:nth-of-type(2n){
-    float: left;
-    clear: left;
-  }
-
-  #biolist ul.timeline li.time + li.note{
-    margin-top:-5px;
-  }
-
-  #biolist ul.timeline li.note:after{
-    content:'';
-    position:absolute;
-    left:-8.7%;
-    right: auto;
-    display:block;
-    width:50px;
-    height:1px;
-    background:#222222;
-    top:50%;
-    z-index:20;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    transform: translateY(-50%);
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-
-  #biolist ul.timeline li.note:nth-of-type(2n):after{
-    right:-8.6%;
-    left: auto;
-  }
-
-  .note-arrow{
-    position: absolute;
-    right: 100%;
-    left: auto;
-      top: 50%;
-      display: block;
-      border-right: 0px solid;
-      border-right-color: rgba(0,0,0,0); 
-      border-left: none;
-      border-top: 0px solid transparent;
-      border-bottom: 0px solid transparent; 
-      -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-
-  .note-arrow:after{
-    content:'';
+}
+.biolist {
+  padding-bottom: 0;
+}
+.note-arrow {
+  position: absolute;
+  right: 100%;
+  left: auto;
+  top: 50%;
+  display: block;
+  border-right: 0 solid;
+  border-right-color: rgba(0,0,0,0);
+  border-left: none;
+  border-top: 0 solid transparent;
+  border-bottom: 0 solid transparent;
+  //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  transform: translateY(-50%);
+  &:after {
+    content: '';
     position: absolute;
     left: 1px;
-    right:auto;
-      top: 0px;
-      display: block;
-      border-right: 0px solid;
-      border-right-color: rgba(0,0,0,0); 
-      border-left: none;
-      border-top: 0px solid transparent;
-      border-bottom: 0px solid transparent; 
-      -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
+    right: auto;
+    top: 0;
+    display: block;
+    border-right: 0 solid;
+    border-right-color: rgba(0,0,0,0);
+    border-left: none;
+    border-top: 0 solid transparent;
+    border-bottom: 0 solid transparent;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
     transform: translateY(-50%);
   }
-
-  #biolist ul.timeline li.note:nth-of-type(2n) .note-arrow{
-    left: 100%;
-    right: auto;
-    border-left: 0px solid;
-      border-left-color:rgba(0,0,0,0); 
-      border-right: none;
-  }
-
-  #biolist ul.timeline li.note:nth-of-type(2n) .note-arrow:after{
-    border-left: 0px solid;
-      border-left-color: rgba(0,0,0,0); 
-      border-top: 0px solid transparent;
-      border-bottom: 0px solid transparent; 
-      border-right: none;
-      right:1px;
-      left:auto;
-  }
-
-  #biolist ul.timeline li.start{
-    clear: both;
-    width: 60px;
-    height: 60px;
-    display: block;
-    position: absolute;
-    left:50%;
-    margin-left:-30px;
-    margin-bottom:-30px;
-    bottom: 0;
-    background:#1a9bd7;
-    border-radius:50%;
-  }
-
-  #biolist ul.timeline li.start a{
-    width: 60px;
-    height: 60px;
-    display: block;
-    color: white;
-    font-size:2em;
-    line-height:55px;
-    text-align: center;
-    border-radius:50%;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-  
-  #biolist ul.timeline li.start a:hover{
-    background:black;
-  } 
-
-  li.note p,
-  li.note span,
-  li.note span:after{
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-  
-
-  li.note p.biolist-date{
-    font-size:1.4em;
-    color:#888888;
-    padding:15px;
-    text-align:center;
-  }
-
-  li.note p.biolist-head{
-    font-size:1.4em;
-    margin:12px auto 3px auto;
-    color:#888888;
-    text-align:center;
-  }
-
-  li.note p.biolist-desc{
-    font-size:13px;
-    color:#cccccc;
-    padding:10px 0;
-  }
-
-  .timeline-images{
-    width:90%;
-    position: absolute;
-    bottom:-35px;
-    height: auto;
-  }
-
-  .timeline-images a.timeline-image{
-    width:70px;
+}
+.timeline-images {
+  width: 90%;
+  position: absolute;
+  bottom: -35px;
+  height: auto;
+  a.timeline-image {
+    width: 70px;
     height: 70px;
-    margin-right:15px;
-    margin-left:0;
-    float:left;
+    margin-right: 15px;
+    margin-left: 0;
+    float: left;
     display: block;
     position: relative;
+    img {
+      width: 70px;
+      height: 70px;
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 10%;
+      border: none;
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.3s;
+    }
   }
-
-  #biolist ul.timeline li.note:nth-of-type(2n) .timeline-images a.timeline-image{
-    float:right;
-    margin-left:15px;
-    margin-right:0;
-  }
-
-  .timeline-images a.timeline-image img{
-    width:70px;
-    height: 70px;
-    border-radius:10%;
-    border:none;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-
-  #biolist ul.timeline li.note:hover span.note-arrow,
-  #biolist ul.timeline li.note:hover span.note-arrow:after{
-    border-right-color: #1a9bd7; 
-  }
-
-  #biolist ul.timeline li.note:hover:nth-of-type(2n) span.note-arrow,
-  #biolist ul.timeline li.note:hover:nth-of-type(2n) span.note-arrow:after{
-    border-left-color: #1a9bd7; 
-  }
-
-  a.timeline-image img:hover{
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-
-  .galleryup{
-    float:left;
-    position:relative;
-    min-height:1px;
-    padding-left:15px;
-    padding-right:15px;
-    width:33.29%;
-    margin:0 auto 0px;
-  }
-
-  #morenews{
-    background:#333 url(../images/ln-bg-dark.jpg) repeat;
-    margin:0 auto;
-    padding:70px 0 80px;
-    overflow: hidden;
-    width: 100%;
-  } 
-
-  .morenews{
-    width:100%;
+}
+.galleryup {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 33.29%;
+  margin: 0 auto 0;
+}
+#morenews {
+  background: $color_mine_shaft_approx $url_6 repeat;
+  margin: 0 auto;
+  padding: 70px 0 80px;
+  overflow: hidden;
+  width: 100%;
+  .morenews-items {
     height: auto;
-    margin:0 auto;
-    max-width: 1170px;
-    text-align: left;
-    padding:0px 0 0px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
   }
-
-  .filter-menu{
-    margin:15px 0px 10px 0px;
-    text-align:right;
-    padding-right:20px;
-    padding-top:0px;
-  }
-
-  .filter-menu ul li{
+}
+.morenews {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  max-width: 1170px;
+  text-align: left;
+  padding: 0;
+}
+.filter-menu {
+  margin: 15px 0 10px;
+  text-align: right;
+  padding-right: 20px;
+  padding-top: 0;
+  ul li {
     display: inline-block;
-    margin:0 2px;
+    margin: 0 2px;
+    a {
+      padding: 7px 16px;
+      background: $color_log_cabin_approx;
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 3px;
+      color: $color_suva_gray_approx;
+      font-size: 11px;
+      line-height: 36px;
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.3s;
+      &:hover {
+        background: $color_curious_blue_approx;
+        border: none;
+        color: $white;
+      }
+      &.selected {
+        background: $color_curious_blue_approx;
+        border: none;
+        color: $white;
+      }
+    }
   }
-
-  .filter-menu ul li a{
-    padding:7px 16px;
-    background:#222;
-    border-radius:3px;
-    color:#888;
-    font-size:11px;
-    line-height:36px;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-
-  .filter-menu ul li a:hover{
-    background:#1a9bd7;
-    border:none;
-    color:white;
-  }
-
-  #morenews .morenews-items{
-    height: auto;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .filter-menu ul li a.selected{
-    background:#1a9bd7;
-    border:none;
-    color:white;
-  }
-
-  .morenews-items .tmot-bio-item{
-    height: auto;
-    position: relative;
-    padding:3px;
-  }
-
-  .morenews-items .tmot-bio-item .tmot-bio-item-inner{
-    width:100%;
-    height:100%;
-    position: relative;
-    border:none;
-    padding:0;
-    margin:0;
-  }
-
-  .tmot-bio-item-image{
-    width:100%;
-    position: relative;
-    height: auto;
-    margin:0;
-    padding:0;
-    background:#1a9bd7;
-  }
-
-  .tmot-bio-item-image a{
-    display:block;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-  }
-
-  .tmot-bio-item-image a img{
-    width:100%;
-    height: auto;
-    cursor: pointer;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-
-  .tmot-bio-item-image a span.positive{
+}
+.tmot-bio-item-image {
+  width: 100%;
+  position: relative;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background: $color_curious_blue_approx;
+  a {
     display: block;
-    width:43px;
-    height: 43px;
-    position: absolute;
-    top:50%;
-    left:50%;
-    margin-top:-21px;
-    margin-left:-21px;
-    background:url(../images/positive.png);
-    opacity: 0;
-    -webkit-transform: scale(0.1);
-    -moz-transform: scale(0.1);
-    -ms-transform: scale(0.1);
-    transform: scale(0.1);
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.3s;
+    }
+    span.positive {
+      display: block;
+      width: 43px;
+      height: 43px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -21px;
+      margin-left: -21px;
+      background: $url_22;
+      opacity: 0;
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: scale(0.1);
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.3s;
+    }
   }
-
-  .tmot-bio-item-image:hover a span.positive{
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
+  &:hover a {
+    img {
+      opacity: 0.3;
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: scale(1.1);
+    }
+    span.positive {
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: scale(1);
+      opacity: 1;
+    }
   }
-
-  .tmot-bio-item-image:hover a img{
-    opacity: 0.3;
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+}
+.tmot-bio-item-bottom {
+  padding: 16px;
+  background: $color_mine_shaft_approx;
+  p {
+    &.tmot-bio-item-name {
+      color: $color_celeste_approx;
+      font-size: 15px;
+    }
+    &.tmot-bio-item-category {
+      color: $color_suva_gray_approx;
+      font-size: 13px;
+    }
   }
-
-  .tmot-bio-item-bottom{
-    padding:16px;
-    background:#333;
-  }
-
-  .tmot-bio-item-bottom p.tmot-bio-item-name{
-    color:#ccc;
-    font-size:15px;
-  }
-
-  .tmot-bio-item-bottom p.tmot-bio-item-category{
-    color:#888;
-    font-size:13px;
-  }
-
-  .tmot-bio-item-bottom a{
+  a {
     display: block;
     width: 40px;
-    height:40px;
+    height: 40px;
     position: absolute;
     bottom: 10px;
     right: 10px;
-    text-align:center;
-    line-height:40px;
-    background:#555;
-    border-radius:50%;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-  
-  .tmot-bio-item-bottom a{
-    color:#fff;
-  }
-  
-  .tmot-bio-item-bottom a:hover{
-    background:black;
-  }
-
-  .tmot-bio-item-bottom a span.arrow{
-    display: block;
-    position: relative;
-    width: 12px;
-    height: 17px;
-    top:50%;
-    margin:0 auto;
-    background:url(../images/tmot-bio-item-arrow.png) center center no-repeat;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    transform: translateY(-50%);
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-
-  .tmot-bio-item-bottom a.tmot-bio-item-link:hover span.arrow{
-    background:url(../images/tmot-bio-item-arrow-hover.png) center center no-repeat;
-  }
-
-  .isotope-item {
-    z-index: 2;
-  }
-
-  .isotope-hidden.isotope-item {
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  .isotope,
-  .isotope .isotope-item {
-    -webkit-transition-duration: 0.8s;
-     -moz-transition-duration: 0.8s;
-      -ms-transition-duration: 0.8s;
-       -o-transition-duration: 0.8s;
-        transition-duration: 0.8s;
-  }
-
-  .isotope {
-    -webkit-transition-property: height, width;
-     -moz-transition-property: height, width;
-      -ms-transition-property: height, width;
-       -o-transition-property: height, width;
-        transition-property: height, width;
-  }
-
-  .isotope .isotope-item {
-    -webkit-transition-property: -webkit-transform, opacity;
-     -moz-transition-property:    -moz-transform, opacity;
-      -ms-transition-property:     -ms-transform, opacity;
-       -o-transition-property:      -o-transform, opacity;
-        transition-property:         transform, opacity;
-  }
-
-  .isotope.no-transition,
-  .isotope.no-transition .isotope-item,
-  .isotope .isotope-item.no-transition {
-    -webkit-transition-duration: 0s;
-     -moz-transition-duration: 0s;
-      -ms-transition-duration: 0s;
-       -o-transition-duration: 0s;
-        transition-duration: 0s;
-  }
-
-  #tmot-box-closer{
-    position: relative;
-    padding:10px 0;
-    width:100%;
-    max-width:1170px;
-    margin:0 auto;
-    overflow: hidden;
-  }
-  
-  .tmot-box-closer {
-    position:relative;
-    padding:0px 0 20px;
-    display: none;
-    margin:15px auto;
     text-align: center;
-    background:#333333;
-    border-top:#444444 2px solid;
-    border-bottom:#444444 2px solid;
+    line-height: 40px;
+    background: $color_fuscous_gray_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 50%;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 0.3s;
+    color: $white;
+    &:hover {
+      background: $black;
+    }
+    span.arrow {
+      display: block;
+      position: relative;
+      width: 12px;
+      height: 17px;
+      top: 50%;
+      margin: 0 auto;
+      background: $url_23 center center no-repeat;
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: translateY(-50%);
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.3s;
+    }
+    &.tmot-bio-item-link:hover span.arrow {
+      background: $url_24 center center no-repeat;
+    }
   }
-  
-  .extended-project h1{
-    color:#eee !important;
-    font-weight: 600;
-  } 
-  
-  .extended-project p{
-    color:#888;
+}
+.isotope-item {
+  z-index: 2;
+}
+.isotope {
+  //Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+  transition-duration: 0.8s;
+  //Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+  transition-property: height, width;
+  .isotope-item {
+    //Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+    transition-duration: 0.8s;
+    //Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+    transition-property: transform, opacity;
+    &.no-transition {
+      //Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+      transition-duration: 0s;
+    }
   }
-  
-  .extended-project .button{
-    background:#444;
-  }   
-
-
-  .project-controls{
+  &.no-transition {
+    //Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+    transition-duration: 0s;
+    .isotope-item {
+      //Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+      transition-duration: 0s;
+    }
+  }
+}
+#tmot-box-closer {
+  position: relative;
+  padding: 10px 0;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.tmot-box-closer {
+  position: relative;
+  padding: 0 0 20px;
+  display: none;
+  margin: 15px auto;
+  text-align: center;
+  background: $color_mine_shaft_approx;
+  border-top: $color_tundora_approx 2px solid;
+  border-bottom: $color_tundora_approx 2px solid;
+  .cls-btn .close {
     position: relative;
-    width:100%;
-    height: auto;
-    top:15px;
-    max-width: 1170px;
-    margin:10px auto;
-  }
-
-  .tmot-box-closer-inner{
-    position: relative;
-    top:0;
-  }
-
-  .cls-btn{
-    width:100%;
-    padding: 0;
-    margin: 0px auto 0;
-    display: block;
-    height: auto;
-  }
-
-  .tmot-box-closer .cls-btn .close {
-    position:relative;
     display: inline-block;
-    color:#eee;
-    top:0;
-    margin:0;
-    width:auto;
-    height:auto;
-    font-size:25px;
-    font-weight:700;
-    text-align:center;
+    color: $color_gallery_approx;
+    top: 0;
+    margin: 0;
+    width: auto;
+    height: auto;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
     cursor: pointer;
-    float:none;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
+    float: none;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
     transition: all 0.3s;
   }
-
-  .expander-close:hover {
-    color:#888;
-    cursor:pointer;
+}
+.extended-project {
+  h1 {
+    color: $color_gallery_approx !important;
+    font-weight: 600;
   }
-
-
-  .project{
-    position: relative;
-    text-align: left;
+  p {
+    color: $color_suva_gray_approx;
   }
-
-  .project ul.project-slides li.slide img{
-    width: 100%;
+  .button {
+    background: $color_tundora_approx;
   }
-
-  .project ul.flex-direction-nav{
-    display: block;
-    opacity: 1;
+}
+.project-controls {
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: 15px;
+  max-width: 1170px;
+  margin: 10px auto;
+}
+.tmot-box-closer-inner {
+  position: relative;
+  top: 0;
+}
+.cls-btn {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto 0;
+  display: block;
+  height: auto;
+}
+.project {
+  position: relative;
+  text-align: left;
+  ul {
+    &.flex-direction-nav {
+      display: block;
+      opacity: 1;
+      li a {
+        width: 31px;
+        height: 52px;
+        top: 50%;
+        background: $color_rangoon_green_approx center center no-repeat;
+        opacity: 0.8;
+        margin-top: -26px;
+        &.flex-prev {
+          left: 0;
+          background-image: $url_25;
+        }
+        &.flex-next {
+          background-image: $url_26;
+          right: 0;
+          left: auto;
+        }
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    &.project-slides li.slide img {
+      width: 100%;
+    }
   }
-
-  .project ul.flex-direction-nav li a{
-    opacity: 1;
-    width:31px;
-    height: 52px;
-    top:50%;
-    background:#1d1d1d center center no-repeat;
-    opacity: 0.8;
-    margin-top:-26px;
+}
+.project-header {
+  text-align: left;
+  font-size: 25px;
+  margin: 0 0 10px;
+  padding: 30px 0 0;
+}
+.project-desc {
+  text-align: left;
+  font-size: 13px;
+}
+.project-detail {
+  text-align: left;
+  padding: 10px 0;
+  font-size: 16px;
+  margin: 0;
+}
+#tmot-news {
+  border-bottom: none;
+  .tmot-news .tmot-news-items {
+    margin: 30px auto 0;
   }
-
-  .project ul.flex-direction-nav li a.flex-prev{
-    left:0;
-    background-image:url(../images/arrow-left.png);
-  }
-
-  .project ul.flex-direction-nav li a.flex-next{
-    background-image:url(../images/arrow-right.png);
-    right:0;
-    left:auto;
-  }
-
-  .project ul.flex-direction-nav li a:hover{
-    opacity: 1;
-  }
-
-
-  ol.flex-control-nav{
-    bottom:15px;
-    position: absolute;
-    z-index: 2;
-  }
-
-
-  .project-header{
-    text-align: left;
-    font-size:25px;
-    margin:0 0 10px;
-    padding:30px 0 0;
-  }
-
-  .project-desc{
-    text-align: left;
-    font-size:13px;
-  }
-
-  .project-detail{
-    text-align: left;
-    padding:10px 0;
-    font-size:16px;
-    margin:0;
-  }
-
-
-  #tmot-news{
-    border-bottom:none;
-  }
-
-  #tmot-news .tmot-news .tmot-news-items{
-    margin:30px auto 0;
-  }
-
-  .tmot-news-items .tmot-news-piece{
-    margin:15px auto;
+}
+.tmot-news-items {
+  .tmot-news-piece {
+    margin: 15px auto;
     cursor: default;
     overflow: hidden;
+    .tmot-news-inner {
+      position: relative;
+    }
+    a.tmot-news-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      z-index: 2;
+      img {
+        width: 100%;
+      }
+    }
+    &:hover .tmot-news-piece-details {
+      bottom: 0;
+    }
   }
-
-  .tmot-news-items .tmot-news-piece .tmot-news-inner{
-    position: relative;
+  .tmot-news-piece-details {
+    .tmot-news-piece-name {
+      color: $white;
+      margin-top: 0;
+      padding-top: 0;
+      font-size: 30px;
+    }
+    .tmot-news-piece-position {
+      color: $color_curious_blue_approx;
+      font-size: 13px;
+    }
+    .tmot-news-piece-description {
+      color: $white;
+      font-size: 13px;
+    }
   }
-
-  .tmot-news-items .tmot-news-piece a.tmot-news-image{
-    display: block;
-    width: 100%;
-    height: auto;
-    z-index: 2;
-  }
-
-  .tmot-news-items .tmot-news-piece a.tmot-news-image img{
-    width: 100%;
-  }
-
-  .inner-details .tmot-news-piece-details{
-    position: absolute;
-    width: 100%;
-    left:0;
-    height: 100%;
-    padding:15px;
-    bottom:100%;
-    margin:0;
-    z-index: 3;
-    opacity:0.9;
-    background:#1a9bd7;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    transition: all 0.4s;
-  }
-
-  .inner-details .tmot-news-piece-details .tmot-news-piece-details-inner{
-    position: relative;
-    top:50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-
-
-  .tmot-news-items .tmot-news-piece-details .tmot-news-piece-name{
-    color: white;
-    margin-top:0;
-    padding-top:0;
-    font-size:30px;
-  }
-
-  .tmot-news-items .tmot-news-piece-details .tmot-news-piece-position{
-    color:#1a9bd7;
-    font-size:13px;
-  }
-
-  .tmot-news-items .tmot-news-piece-details .tmot-news-piece-description{
-    color:#fff;
-    font-size:13px;
-  }
-
-
-  .tmot-news-piece .tmot-news-piece-details .tmot-news-piece-details-inner .socials{
-    margin:10px auto 0;
-  }
-
-  .tmot-news-piece .tmot-news-piece-details .tmot-news-piece-details-inner .socials a{
-    display: inline-block;
-    color:white;
-    font-size:1.2em;
-    line-height:40px;
-    width:40px;
-    height:40px;
-    background:rgba(0,0,0,0.25);
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    border-radius:50%;
-  }
-
-
-  .tmot-news-items .tmot-news-piece:hover .tmot-news-piece-details{
-    bottom:0;
-  }
-
-  .tmot-news-piece .tmot-news-piece-details .tmot-news-piece-details-inner .socials a:hover{
-    background:rgba(0,0,0,1);
-    border-radius:50%;
-  }
-
-
-  #static-content-01 .static-content-01 .facts .fact{
+}
+#static-content-01 {
+  background: $color_mine_shaft_approx $url_6 repeat;
+  .static-content-01 .facts .fact {
     height: 150px;
-    padding:0;
+    padding: 0;
   }
-  
-  #static-content-01{
-    background:#333 url(../images/ln-bg-dark.jpg) repeat;
-  }
-
-
-  ::-webkit-input-placeholder { /* WebKit browsers */
-    color:    #727272;
-  }
-  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:    #727272;
-  }
-  ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    #727272;
-  }
-  :-ms-input-placeholder { /* Internet Explorer 10+ */
-    color:    #727272;
-  }
-
-
-  #site-socials .socials{
-    width:100%;
+}
+::-webkit-input-placeholder {
+  color: $color_dove_gray_approx;
+}
+:-moz-placeholder {
+  color: $color_dove_gray_approx;
+}
+::-moz-placeholder {
+  color: $color_dove_gray_approx;
+}
+:-ms-input-placeholder {
+  color: $color_dove_gray_approx;
+}
+#site-socials {
+  .socials {
+    width: 100%;
     padding: 15px 10px;
+    a.social {
+      font-size: 1.5em;
+      color: $white;
+      margin: 15px auto;
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      line-height: 40px;
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.3s;
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 50%;
+      background: $color_curious_blue_approx;
+      &:hover {
+        background: $color_log_cabin_approx;
+        color: $white;
+      }
+    }
   }
-
-  #site-socials .socials a.social{
-    font-size:1.5em;
-    color:#fff;
-    margin:15px auto;
-    width:40px;
-    height:40px;
-    display: inline-block;
-    line-height: 40px;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    border-radius:50%;
-    background:#1a9bd7;
-  }
-
-  #site-socials .socials a.social:hover{
-    background:#222;
-    color:white;
-  }
-
-
-  #site-socials .address{
+  .address {
     width: 100%;
     height: auto;
-    margin:0px auto 25px auto;
+    margin: 0 auto 25px auto;
   }
-
-
-  #site-socials .top-button{
-    margin:30px auto 0;
+  .top-button {
+    margin: 30px auto 0;
     display: inline-block;
-    width:40px;
+    width: 40px;
     height: 40px;
-    background:rgba(100,100,100,0.25);
-    color:#d1d1d1;
+    background: $color_storm_dust_25_approx;
+    color: $color_celeste_approx;
     font-size: 20px;
     line-height: 38px;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
     transition: all 0.3s;
-    position:fixed;
-    right:10px;
-    bottom:10px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
     border-radius: 5px;
+    &:hover {
+      color: $color_curious_blue_approx;
+    }
   }
-
-  #site-socials .top-button:hover{
-    color:#1a9bd7;
+}
+.footer {
+  padding: 45px;
+  text-align: center;
+  background: $color_log_cabin_approx;
+  h2.company-name {
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 35px;
   }
-
-
-  .footer{
-    padding:45px;
-    text-align: center;
-    background: #191919;
-    background:#222;
+  p.copyright {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 15px;
+    color: $color_mountain_mist_approx;
+    font-size: 14px;
+    a:hover {
+      color: $color_curious_blue_approx;
+    }
   }
-
-  .footer h2.company-name{
-    margin-top:0;
-    padding-top:0;
-    font-size:35px;
+}
+.page_header_inner {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  h1 {
+    font-size: 40px;
+    margin: 0;
+    color: $white;
   }
-
-  .footer p.copyright{
-    margin-bottom:0;
-    padding-bottom:0;
-    padding-top:15px;
-    color:#999;
-    font-size:14px;
+  p {
+    font-size: 14px;
+    color: $color_gallery_approx;
+    margin: 0;
   }
-
-  .footer p.copyright a:hover{
-    color:#1a9bd7;
+}
+.block {
+  display: inline;
+}
+b.caret {
+  margin: -3px 0 auto 5px;
+}
+.pattern-white:after {
+  background: $url_4 repeat;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0.25;
+}
+.pattern-black:after {
+  background: $url_5 repeat;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0.25;
+}
+.home-categories .h-item:last-child {
+  background: none;
+}
+.slides-container div {
+  background-size: 100%;
+}
+#slides .slides-container {
+  div {
+    background-position: center center;
+    background-attachment: fixed;
   }
-
-  section.page_header{
-    margin-top:0px;
-    padding:220px 0 50px 0;
+  .image1 {
+    background-image: $url_10;
+  }
+  .image2 {
+    background-image: $url_11;
+  }
+  .image3 {
+    background-image: $url_12;
+  }
+  .image4 {
+    background-image: $url_13;
+  }
+}
+.current .home-arrow {
+  margin: 0 auto;
+  left: 50%;
+  bottom: 12%;
+  position: absolute;
+  //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  transform: translateX(-50%);
+  &:hover {
+    color: $white;
+  }
+}
+.nav li {
+  display: inline-block;
+  height: 100%;
+  a {
+    display: block;
+    height: 100%;
+    line-height: 54px;
+    color: $color_fuscous_gray_approx;
+    font-size: 1.05em;
+    font-weight: 600;
+    padding: 10px 8px;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 0.3s;
+    font-family: $font_0, $font_1;
+  }
+}
+#bio .inner .boxes {
+  overflow: hidden;
+  &:after {
+    clear: both;
+  }
+}
+.f-icon i {
+  font-size: 3em;
+  color: $white;
+  background: $color_curious_blue_approx;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all 0.3s;
+  border: $black_20 5px solid;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 50%;
+  padding: 30px;
+  width: 110px;
+}
+li.note {
+  p {
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 0.3s;
+    &.biolist-date {
+      font-size: 1.4em;
+      color: $color_suva_gray_approx;
+      padding: 15px;
+      text-align: center;
+    }
+    &.biolist-head {
+      font-size: 1.4em;
+      margin: 12px auto 3px auto;
+      color: $color_suva_gray_approx;
+      text-align: center;
+    }
+    &.biolist-desc {
+      font-size: 13px;
+      color: $color_celeste_approx;
+      padding: 10px 0;
+    }
+  }
+  span {
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 0.3s;
+    &:after {
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.3s;
+    }
+  }
+}
+.morenews-items .tmot-bio-item {
+  height: auto;
+  position: relative;
+  padding: 3px;
+  .tmot-bio-item-inner {
+    width: 100%;
+    height: 100%;
     position: relative;
-    top:0px;
-    background:url(../images/box-03.jpg) bottom center fixed;
+    border: none;
+    padding: 0;
+    margin: 0;
   }
-
-  .page_header_inner{
-    width:100%;
-    max-width:1170px;
-    margin:0 auto;
+}
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+.expander-close:hover {
+  color: $color_suva_gray_approx;
+  cursor: pointer;
+}
+.inner-details .tmot-news-piece-details {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  padding: 15px;
+  bottom: 100%;
+  margin: 0;
+  z-index: 3;
+  opacity: 0.9;
+  background: $color_curious_blue_approx;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all 0.4s;
+  .tmot-news-piece-details-inner {
+    position: relative;
+    top: 50%;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translateY(-50%);
   }
-
-  .page_header_inner h1{
-    font-size:40px;
-    margin:0;
-    color:#ffffff;
+}
+.tmot-news-piece .tmot-news-piece-details .tmot-news-piece-details-inner .socials {
+  margin: 10px auto 0;
+  a {
+    display: inline-block;
+    color: $white;
+    font-size: 1.2em;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    background: $black_25;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all 0.3s;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 50%;
+    &:hover {
+      background: $black_100;
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 50%;
+    }
   }
-
-  .page_header_inner p{
-    font-size:14px;
-    color:#eeeeee;
-    margin:0;
-  }
-  
-  .block{
-    display:inline;
-  }
+}
+section.page_header {
+  margin-top: 0;
+  padding: 220px 0 50px 0;
+  position: relative;
+  top: 0;
+  background: $url_7 bottom center fixed;
+}
