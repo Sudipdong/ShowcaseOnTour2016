@@ -1,0 +1,112 @@
+@import "base";
+
+.h1 {
+  font-family: $font_2, $font_1;
+  font-weight: 100;
+}
+.h2 {
+  font-family: $font_2, $font_1;
+  font-weight: 100;
+}
+.h3 {
+  font-family: $font_2, $font_1;
+  font-weight: 100;
+}
+.h4 {
+  font-family: $font_2, $font_1;
+  font-weight: 100;
+}
+.h5 {
+  font-family: $font_2, $font_1;
+  font-weight: 100;
+}
+.h6 {
+  font-family: $font_2, $font_1;
+  font-weight: 100;
+}
+.clear {
+  clear: both;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  &.nav ul.dropdown-menu {
+    padding: 0;
+    margin: 0;
+    border: none;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    background: $white_97;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 1px 4px $black_25;
+    li {
+      width: 100%;
+      height: auto;
+      a {
+        height: auto;
+        padding: 10px;
+        margin: 0;
+        display: block;
+        width: 100%;
+        color: $color_woodsmoke_approx;
+        line-height: 20px;
+        border: none;
+        font-size: 1em;
+      }
+    }
+  }
+  &.dropdown-menu li a:hover {
+    border: none;
+    background: $black_10;
+    color: $color_curious_blue_approx !important;
+  }
+}
+
+.btn {
+  outline: none;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all 0.4s;
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    outline: none;
+  }
+}
+.condensed {
+  font-family: $font_3, $font_1;
+}
+.fancy {
+  font-family: $font_4, $font_5;
+}
+.animated {
+  visibility: hidden;
+}
+.visible {
+  visibility: visible;
+}
+@-webkit-keyframes BackgroundAnimation {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 9600px 0;
+  }
+}
+@-moz-keyframes BackgroundAnimation {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 9600px 0;
+  }
+}
+@-ms-keyframes BackgroundAnimation {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 9600px 0;
+  }
+}

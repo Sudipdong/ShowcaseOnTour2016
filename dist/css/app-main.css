@@ -11,15 +11,15 @@ html, body {
   margin-right: 0;
   font-family: Open Sans, sans-serif; }
 
-::selection {
-  background-color: #ececec; }
-
 body {
   overflow-x: hidden; }
 
 img {
   user-select: none;
   user-drag: none; }
+
+::selection {
+  background-color: #ececec; }
 
 a {
   text-decoration: none;
@@ -60,6 +60,17 @@ h6 {
   font-family: Alegreya Sans, sans-serif;
   font-weight: 100; }
 
+p {
+  margin: 0 0 5px; }
+
+ol {
+  list-style: none;
+  padding: 0; }
+  ol.flex-control-nav {
+    bottom: 15px;
+    position: absolute;
+    z-index: 2; }
+
 .h1 {
   font-family: Alegreya Sans, sans-serif;
   font-weight: 100; }
@@ -84,19 +95,8 @@ h6 {
   font-family: Alegreya Sans, sans-serif;
   font-weight: 100; }
 
-p {
-  margin: 0 0 5px; }
-
 .clear {
   clear: both; }
-
-ol {
-  list-style: none;
-  padding: 0; }
-  ol.flex-control-nav {
-    bottom: 15px;
-    position: absolute;
-    z-index: 2; }
 
 ul {
   list-style: none;
