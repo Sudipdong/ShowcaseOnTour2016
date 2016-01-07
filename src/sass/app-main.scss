@@ -1,77 +1,4 @@
-//colors
-$color_cararra_approx: #ececec;
-$white: #fff;
-$seashell: #f1f1f1;
-$color_alto_approx: #dddddd;
-$color_celeste_approx: #ccc;
-$black: black;
-$color_gallery_approx: #eeeeee;
-$color_mountain_mist_approx: #999999;
-$color_woodsmoke_approx: #111;
-$color_mine_shaft_approx: #333;
-$color_curious_blue_approx: #1a9bd7;
-$color_wild_sand_approx: #f5f5f5;
-$color_emperor_approx: #4d4d4d;
-$black_30: rgba(0, 0, 0, 0.3);
-$white_80: rgba(255,255,255, 0.8);
-$color_pink_swan_approx: #b8b7b7;
-$black_15: rgba(0, 0, 0, 0.15);
-$white_90: rgba(255, 255, 255, 0.9);
-$black_50: rgba(0,0,0, 0.5);
-$black_60: rgba(0,0,0,0.6);
-$white_5: rgba(255, 255, 255, 0.05);
-$color_tapa_approx: #777;
-$color_fuscous_gray_approx: #555555;
-$color_log_cabin_approx: #222;
-$white_97: rgba(255, 255, 255, 0.97);
-$black_25: rgba(0,0,0, 0.25);
-$black_10: rgba(0, 0, 0, 0.1);
-$black_90: rgba(0, 0, 0, 0.9);
-$color_storm_dust_25_approx: rgba(100, 100, 100, 0.25);
-$color_shark_approx: #252525;
-$white_95: rgba(255,255,255,0.95);
-$black_20: rgba(0,0,0,0.2);
-$color_tundora_approx: #444;
-$color_suva_gray_approx: #888;
-$color_storm_dust_approx: #666;
-$mine_shaft_95: rgba(50,50,50,0.95);
-$black_40: rgba(0,0,0, 0.4);
-$color_rangoon_green_approx: #1d1d1d;
-$black_100: rgba(0,0,0,1);
-$color_dove_gray_approx: #727272;
-
-//fonts
-$font_0: Open Sans;
-$font_1: sans-serif;
-$font_2: Alegreya Sans;
-$font_3: Open Sans Condensed;
-$font_4: Great Vibes;
-$font_5: cursive;
-
-//urls
-$url_4: url(../images/pattern-white.png);
-$url_5: url(../images/pattern-black.png);
-$url_6: url(../images/ln-bg-dark.jpg);
-$url_7: url(../images/box-03.jpg);
-$url_8: url(../images/box-02.jpg);
-$url_9: url(../images/li-item.png);
-$url_10: url(../images/box-08.jpg);
-$url_11: url(../images/box-07.jpg);
-$url_12: url(../images/box-05.jpg);
-$url_13: url(../images/box-06.jpg);
-$url_14: url(../images/slider-arrows.png);
-$url_15: url(../images/ln-arrow-left.png);
-$url_16: url(../images/ln-arrow-right.png);
-$url_17: url(../images/ln-box-22.jpg);
-$url_18: url(../images/ln-box-23.jpg);
-$url_19: url(../images/white-nav-controls.png);
-$url_20: url(../images/ln-box-25.jpg);
-$url_21: url(../images/ln-milestone.jpg);
-$url_22: url(../images/positive.png);
-$url_23: url(../images/tmot-bio-item-arrow.png);
-$url_24: url(../images/tmot-bio-item-arrow-hover.png);
-$url_25: url(../images/arrow-left.png);
-$url_26: url(../images/arrow-right.png);
+@import "lib/all-lib";
 
 //@extend-elements
 //original selectors
@@ -86,11 +13,6 @@ $url_26: url(../images/arrow-right.png);
   font-family: $font_0, $font_1;
 }
 
-
-@import "http://fonts.googleapis.com/css?family=Great+Vibes";
-@import "http://fonts.googleapis.com/css?family=Alegreya+Sans:400,300";
-@import "http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,600,700,800";
-@import "http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700";
 ::selection {
   background-color: $color_cararra_approx;
 }
