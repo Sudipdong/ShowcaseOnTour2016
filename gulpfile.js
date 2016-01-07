@@ -28,8 +28,7 @@ var config = {
 			'node_modules/font-awesome/css/font-awesome.min.css',
 			'bower_components/prettyphoto/css/prettyPhoto.css',
 			'bower_components/animate.css/animate.min.css',
-			'bower_components/FlexSlider/flexslider.css',
-			'./src/css/*.css'
+			'bower_components/FlexSlider/flexslider.css'
 		],
 		font: [
   		'node_modules/font-awesome/fonts/*.*',
