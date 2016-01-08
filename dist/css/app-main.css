@@ -120,6 +120,14 @@ ul {
   to {
     background-position: 9600px 0; } }
 
+.layout-pagelanding {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #f1f1f1;
+  z-index: 9999; }
+
 ul.nav ul.dropdown-menu {
   padding: 0;
   margin: 0;
@@ -165,14 +173,6 @@ ul.dropdown-menu li a:hover {
 
 .visible {
   visibility: visible; }
-
-#pagelanding {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  background-color: #f1f1f1;
-  z-index: 9999; }
 
 .pagelanding-zone {
   position: absolute;
