@@ -21,6 +21,9 @@ img {
 ::selection {
   background-color: #ececec; }
 
+.clear {
+  clear: both; }
+
 a {
   text-decoration: none;
   outline: none; }
@@ -71,6 +74,10 @@ ol {
     position: absolute;
     z-index: 2; }
 
+ul {
+  list-style: none;
+  padding: 0; }
+
 .h1 {
   font-family: Alegreya Sans, sans-serif;
   font-weight: 100; }
@@ -95,36 +102,49 @@ ol {
   font-family: Alegreya Sans, sans-serif;
   font-weight: 100; }
 
-.clear {
-  clear: both; }
+@-webkit-keyframes BackgroundAnimation {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 9600px 0; } }
 
-ul {
-  list-style: none;
-  padding: 0; }
-  ul.nav ul.dropdown-menu {
-    padding: 0;
-    margin: 0;
-    border: none;
-    border-radius: 0;
-    background: rgba(255, 255, 255, 0.97);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25); }
-    ul.nav ul.dropdown-menu li {
+@-moz-keyframes BackgroundAnimation {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 9600px 0; } }
+
+@-ms-keyframes BackgroundAnimation {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 9600px 0; } }
+
+ul.nav ul.dropdown-menu {
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25); }
+  ul.nav ul.dropdown-menu li {
+    width: 100%;
+    height: auto; }
+    ul.nav ul.dropdown-menu li a {
+      height: auto;
+      padding: 10px;
+      margin: 0;
+      display: block;
       width: 100%;
-      height: auto; }
-      ul.nav ul.dropdown-menu li a {
-        height: auto;
-        padding: 10px;
-        margin: 0;
-        display: block;
-        width: 100%;
-        color: #111;
-        line-height: 20px;
-        border: none;
-        font-size: 1em; }
-  ul.dropdown-menu li a:hover {
-    border: none;
-    background: rgba(0, 0, 0, 0.1);
-    color: #1a9bd7 !important; }
+      color: #111;
+      line-height: 20px;
+      border: none;
+      font-size: 1em; }
+
+ul.dropdown-menu li a:hover {
+  border: none;
+  background: rgba(0, 0, 0, 0.1);
+  color: #1a9bd7 !important; }
 
 .btn {
   outline: none;
@@ -145,24 +165,6 @@ ul {
 
 .visible {
   visibility: visible; }
-
-@-webkit-keyframes BackgroundAnimation {
-  from {
-    background-position: 0 0; }
-  to {
-    background-position: 9600px 0; } }
-
-@-moz-keyframes BackgroundAnimation {
-  from {
-    background-position: 0 0; }
-  to {
-    background-position: 9600px 0; } }
-
-@-ms-keyframes BackgroundAnimation {
-  from {
-    background-position: 0 0; }
-  to {
-    background-position: 9600px 0; } }
 
 #pagelanding {
   width: 100%;

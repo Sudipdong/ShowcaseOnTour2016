@@ -25,6 +25,10 @@ img {
   background-color: $color_cararra_approx;
 }
 
+.clear {
+  clear: both;
+}
+
 a {
   text-decoration: none;
   outline: none;
@@ -82,4 +86,9 @@ ol {
     position: absolute;
     z-index: 2;
   }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
