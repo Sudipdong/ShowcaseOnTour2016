@@ -292,6 +292,48 @@ ul.dropdown-menu li a:hover {
 #home:hover .slides-navigation a {
   opacity: 0.3; }
 
+#slides .slides-container div {
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: 100%; }
+
+#slides .slides-container .image1 {
+  background-image: url(../images/box-08.jpg); }
+
+#slides .slides-container .image2 {
+  background-image: url(../images/box-07.jpg); }
+
+#slides .slides-container .image3 {
+  background-image: url(../images/box-05.jpg); }
+
+#slides .slides-container .image4 {
+  background-image: url(../images/box-06.jpg); }
+
+#slides .slides-navigation {
+  margin: 0 auto;
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  z-index: 20; }
+  #slides .slides-navigation a {
+    position: absolute;
+    display: block;
+    width: 36px;
+    height: 81px;
+    background: url(../images/slider-arrows.png);
+    opacity: 0;
+    transition: all 0.5s; }
+    #slides .slides-navigation a.prev {
+      left: 2%;
+      background-position: left;
+      cursor: url(../images/ln-arrow-left.png), default; }
+    #slides .slides-navigation a.next {
+      right: 2%;
+      background-position: right;
+      cursor: url(../images/ln-arrow-right.png), default; }
+    #slides .slides-navigation a:hover {
+      opacity: 1 !important; }
+
 #static-content-01 {
   background: #333 url(../images/ln-bg-dark.jpg) repeat; }
   #static-content-01 .static-content-01 .facts .fact {
@@ -682,31 +724,6 @@ ul.dropdown-menu li a:hover {
   .home-details-tb .home-details-inner {
     max-width: 90%;
     margin: 0 auto; }
-
-.slides-navigation {
-  margin: 0 auto;
-  position: absolute;
-  top: 45%;
-  width: 100%;
-  z-index: 20; }
-  .slides-navigation a {
-    position: absolute;
-    display: block;
-    width: 36px;
-    height: 81px;
-    background: url(../images/slider-arrows.png);
-    opacity: 0;
-    transition: all 0.5s; }
-    .slides-navigation a.prev {
-      left: 2%;
-      background-position: left;
-      cursor: url(../images/ln-arrow-left.png), default; }
-    .slides-navigation a.next {
-      right: 2%;
-      background-position: right;
-      cursor: url(../images/ln-arrow-right.png), default; }
-    .slides-navigation a:hover {
-      opacity: 1 !important; }
 
 .bio-box {
   text-align: center;
@@ -1366,25 +1383,6 @@ b.caret {
 
 .home-categories .h-item:last-child {
   background: none; }
-
-.slides-container div {
-  background-size: 100%; }
-
-#slides .slides-container div {
-  background-position: center center;
-  background-attachment: fixed; }
-
-#slides .slides-container .image1 {
-  background-image: url(../images/box-08.jpg); }
-
-#slides .slides-container .image2 {
-  background-image: url(../images/box-07.jpg); }
-
-#slides .slides-container .image3 {
-  background-image: url(../images/box-05.jpg); }
-
-#slides .slides-container .image4 {
-  background-image: url(../images/box-06.jpg); }
 
 .current .home-arrow {
   margin: 0 auto;
