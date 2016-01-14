@@ -1,0 +1,13 @@
+#more-news {
+  background: $color_mine_shaft_approx $url_6 repeat;
+  margin: 0 auto;
+  padding: 70px 0 80px;
+  overflow: hidden;
+  width: 100%;
+  .morenews-items {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+}
