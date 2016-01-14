@@ -154,6 +154,195 @@ ul.dropdown-menu li a:hover {
   background: rgba(0, 0, 0, 0.1);
   color: #1a9bd7 !important; }
 
+#navigation {
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  z-index: 1031;
+  transition: all 0.5s; }
+  #navigation .mini-nav-button {
+    color: #777;
+    display: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 25px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    cursor: pointer;
+    transform: translateY(-50%); }
+    #navigation .mini-nav-button:hover {
+      color: #1a9bd7;
+      transition: all 0.3s; }
+
+.visible-nav {
+  top: 0; }
+
+.white-nav {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5); }
+  .white-nav li a:hover {
+    background: #dddddd;
+    color: #1a9bd7; }
+  .white-nav li a:focus {
+    background: #1a9bd7;
+    color: #fff !important; }
+  .white-nav li.active a {
+    color: #1a9bd7; }
+  .white-nav .site-logo a.logo {
+    color: #111;
+    display: block; }
+
+.dark-nav {
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5); }
+  .dark-nav ul.dropdown-menu {
+    background: rgba(0, 0, 0, 0.9) !important; }
+    .dark-nav ul.dropdown-menu li a {
+      color: #fff; }
+      .dark-nav ul.dropdown-menu li a:hover {
+        border: none;
+        background: rgba(100, 100, 100, 0.25); }
+  .dark-nav ul.nav ul.dropdown-menu li a {
+    color: #ccc; }
+  .dark-nav .site-logo a.logo {
+    color: #fff;
+    display: block; }
+  .dark-nav .nav li a {
+    color: #ccc; }
+    .dark-nav .nav li a:hover {
+      background: #222;
+      color: #1a9bd7; }
+    .dark-nav .nav li a:focus {
+      background: #1a9bd7;
+      color: #fff !important; }
+  .dark-nav .nav li.active a {
+    color: #1a9bd7; }
+
+.soft-nav {
+  background: rgba(255, 255, 255, 0.05); }
+
+.nav-inner {
+  width: 100%;
+  max-width: 1170px;
+  height: 100%;
+  margin: 0 auto; }
+  .nav-inner:after {
+    clear: both; }
+
+.site-logo {
+  font-size: 3.5em;
+  float: left;
+  position: relative;
+  padding-top: 8px;
+  top: 50%;
+  transform: translateY(-50%); }
+  .site-logo a.logo img {
+    height: auto;
+    max-height: 189px;
+    transition: all 1s; }
+
+.nav-menu {
+  float: right;
+  height: 100%; }
+  .nav-menu ul.nav {
+    height: 100%; }
+
+#home {
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: 0; }
+  #home .current {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 4;
+    text-align: center; }
+    #home .current .typographic {
+      height: auto;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+      top: 50%;
+      padding: 0 25px;
+      transform: translateY(-50%); }
+      #home .current .typographic .logo {
+        padding: 25px 0; }
+      #home .current .typographic h1 {
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+        line-height: 0.8;
+        font-size: 70%;
+        margin: 10px 0; }
+      #home .current .typographic h2 {
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+        line-height: 0.9;
+        font-size: 80%;
+        margin: 10px 0; }
+  #home:hover .slides-navigation a {
+    opacity: 0.3; }
+
+#static-content-01 {
+  background: #333 url(../images/ln-bg-dark.jpg) repeat; }
+  #static-content-01 .static-content-01 .facts .fact {
+    height: 150px;
+    padding: 0; }
+
+.static-content-02 {
+  background: url(../images/ln-box-23.jpg) center center fixed;
+  padding: 70px 0;
+  text-align: center;
+  overflow: hidden;
+  position: relative; }
+  .static-content-02 .flex-direction-nav {
+    width: 52px;
+    height: 300px;
+    margin: -35px auto 0 auto;
+    position: relative;
+    opacity: 1; }
+    .static-content-02 .flex-direction-nav li {
+      display: block;
+      position: relative;
+      float: left;
+      width: 26px;
+      height: 26px; }
+      .static-content-02 .flex-direction-nav li a {
+        opacity: 1;
+        width: 26px;
+        height: 26px;
+        background: url(../images/white-nav-controls.png); }
+        .static-content-02 .flex-direction-nav li a.flex-prev {
+          background-position: left top;
+          left: -5px; }
+          .static-content-02 .flex-direction-nav li a.flex-prev:hover {
+            background-position: left bottom; }
+        .static-content-02 .flex-direction-nav li a.flex-next {
+          background-position: right top;
+          right: -5px; }
+          .static-content-02 .flex-direction-nav li a.flex-next:hover {
+            background-position: right bottom; }
+    .static-content-02 .flex-direction-nav a:before {
+      display: none; }
+
+.footer {
+  padding: 45px;
+  text-align: center;
+  background: #222; }
+  .footer h2.company-name {
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 35px; }
+  .footer p.copyright {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 15px;
+    color: #999999;
+    font-size: 14px; }
+    .footer p.copyright a:hover {
+      color: #1a9bd7; }
+
 .btn {
   outline: none;
   transition: all 0.4s; }
@@ -333,41 +522,6 @@ ul.dropdown-menu li a:hover {
 .texture-bg {
   background: #333 url(../images/ln-bg-dark.jpg) repeat; }
 
-#home {
-  position: relative;
-  width: 100%;
-  height: auto;
-  top: 0; }
-  #home .current {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    z-index: 4;
-    text-align: center; }
-    #home .current .typographic {
-      height: auto;
-      width: 100%;
-      max-width: 600px;
-      margin: 0 auto;
-      position: relative;
-      top: 50%;
-      padding: 0 25px;
-      transform: translateY(-50%); }
-      #home .current .typographic .logo {
-        padding: 25px 0; }
-      #home .current .typographic h1 {
-        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
-        line-height: 0.8;
-        font-size: 70%;
-        margin: 10px 0; }
-      #home .current .typographic h2 {
-        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
-        line-height: 0.9;
-        font-size: 80%;
-        margin: 10px 0; }
-  #home:hover .slides-navigation a {
-    opacity: 0.3; }
-
 .home {
   background: url(../images/box-03.jpg) center center fixed;
   position: relative;
@@ -491,101 +645,6 @@ ul.dropdown-menu li a:hover {
       cursor: url(../images/ln-arrow-right.png), default; }
     .slides-navigation a:hover {
       opacity: 1 !important; }
-
-#navigation {
-  position: fixed;
-  width: 100%;
-  height: 75px;
-  z-index: 1031;
-  transition: all 0.5s; }
-  #navigation .mini-nav-button {
-    color: #777;
-    display: none;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    font-size: 25px;
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    cursor: pointer;
-    transform: translateY(-50%); }
-    #navigation .mini-nav-button:hover {
-      color: #1a9bd7;
-      transition: all 0.3s; }
-
-.visible-nav {
-  top: 0; }
-
-.white-nav {
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5); }
-  .white-nav li a:hover {
-    background: #dddddd;
-    color: #1a9bd7; }
-  .white-nav li a:focus {
-    background: #1a9bd7;
-    color: #fff !important; }
-  .white-nav li.active a {
-    color: #1a9bd7; }
-  .white-nav .site-logo a.logo {
-    color: #111;
-    display: block; }
-
-.dark-nav {
-  background: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5); }
-  .dark-nav ul.dropdown-menu {
-    background: rgba(0, 0, 0, 0.9) !important; }
-    .dark-nav ul.dropdown-menu li a {
-      color: #fff; }
-      .dark-nav ul.dropdown-menu li a:hover {
-        border: none;
-        background: rgba(100, 100, 100, 0.25); }
-  .dark-nav ul.nav ul.dropdown-menu li a {
-    color: #ccc; }
-  .dark-nav .site-logo a.logo {
-    color: #fff;
-    display: block; }
-  .dark-nav .nav li a {
-    color: #ccc; }
-    .dark-nav .nav li a:hover {
-      background: #222;
-      color: #1a9bd7; }
-    .dark-nav .nav li a:focus {
-      background: #1a9bd7;
-      color: #fff !important; }
-  .dark-nav .nav li.active a {
-    color: #1a9bd7; }
-
-.soft-nav {
-  background: rgba(255, 255, 255, 0.05); }
-
-.nav-inner {
-  width: 100%;
-  max-width: 1170px;
-  height: 100%;
-  margin: 0 auto; }
-  .nav-inner:after {
-    clear: both; }
-
-.site-logo {
-  font-size: 3.5em;
-  float: left;
-  position: relative;
-  padding-top: 8px;
-  top: 50%;
-  transform: translateY(-50%); }
-  .site-logo a.logo img {
-    height: auto;
-    max-height: 189px;
-    transition: all 1s; }
-
-.nav-menu {
-  float: right;
-  height: 100%; }
-  .nav-menu ul.nav {
-    height: 100%; }
 
 .bio-box {
   text-align: center;
@@ -716,42 +775,6 @@ ul.dropdown-menu li a:hover {
 
 #features {
   background: #333 url(../images/ln-bg-dark.jpg) repeat; }
-
-.static-content-02 {
-  background: url(../images/ln-box-23.jpg) center center fixed;
-  padding: 70px 0;
-  text-align: center;
-  overflow: hidden;
-  position: relative; }
-  .static-content-02 .flex-direction-nav {
-    width: 52px;
-    height: 300px;
-    margin: -35px auto 0 auto;
-    position: relative;
-    opacity: 1; }
-    .static-content-02 .flex-direction-nav li {
-      display: block;
-      position: relative;
-      float: left;
-      width: 26px;
-      height: 26px; }
-      .static-content-02 .flex-direction-nav li a {
-        opacity: 1;
-        width: 26px;
-        height: 26px;
-        background: url(../images/white-nav-controls.png); }
-        .static-content-02 .flex-direction-nav li a.flex-prev {
-          background-position: left top;
-          left: -5px; }
-          .static-content-02 .flex-direction-nav li a.flex-prev:hover {
-            background-position: left bottom; }
-        .static-content-02 .flex-direction-nav li a.flex-next {
-          background-position: right top;
-          right: -5px; }
-          .static-content-02 .flex-direction-nav li a.flex-next:hover {
-            background-position: right bottom; }
-    .static-content-02 .flex-direction-nav a:before {
-      display: none; }
 
 .t-slides {
   max-width: 970px;
@@ -1248,12 +1271,6 @@ ul.dropdown-menu li a:hover {
   color: #fff;
   font-size: 13px; }
 
-#static-content-01 {
-  background: #333 url(../images/ln-bg-dark.jpg) repeat; }
-  #static-content-01 .static-content-01 .facts .fact {
-    height: 150px;
-    padding: 0; }
-
 ::-webkit-input-placeholder {
   color: #727272; }
 
@@ -1305,23 +1322,6 @@ ul.dropdown-menu li a:hover {
   border-radius: 5px; }
   #site-socials .top-button:hover {
     color: #1a9bd7; }
-
-.footer {
-  padding: 45px;
-  text-align: center;
-  background: #222; }
-  .footer h2.company-name {
-    margin-top: 0;
-    padding-top: 0;
-    font-size: 35px; }
-  .footer p.copyright {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    padding-top: 15px;
-    color: #999999;
-    font-size: 14px; }
-    .footer p.copyright a:hover {
-      color: #1a9bd7; }
 
 .page_header_inner {
   width: 100%;

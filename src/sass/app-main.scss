@@ -1,39 +1,7 @@
 @import "lib/all-lib";
 @import "base/all-base";
 @import "layout/all-layout";
-
-ul {
-  &.nav ul.dropdown-menu {
-    padding: 0;
-    margin: 0;
-    border: none;
-    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-    border-radius: 0;
-    background: $white_97;
-    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-    box-shadow: 0 1px 4px $black_25;
-    li {
-      width: 100%;
-      height: auto;
-      a {
-        height: auto;
-        padding: 10px;
-        margin: 0;
-        display: block;
-        width: 100%;
-        color: $color_woodsmoke_approx;
-        line-height: 20px;
-        border: none;
-        font-size: 1em;
-      }
-    }
-  }
-  &.dropdown-menu li a:hover {
-    border: none;
-    background: $black_10;
-    color: $color_curious_blue_approx !important;
-  }
-}
+@import "module/all-module";
 
 .btn {
   outline: none;
@@ -221,50 +189,7 @@ ul {
 .texture-bg {
   background: $color_mine_shaft_approx $url_6 repeat;
 }
-#home {
-  position: relative;
-  width: 100%;
-  height: auto;
-  top: 0;
-  .current {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    z-index: 4;
-    text-align: center;
-    .typographic {
-      height: auto;
-      width: 100%;
-      max-width: 600px;
-      margin: 0 auto;
-      position: relative;
-      top: 50%;
-      padding: 0 25px;
-      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-      transform: translateY(-50%);
-      .logo {
-        padding: 25px 0;
-      }
-      h1 {
-        //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-        text-shadow: 2px 2px 2px $black_15;
-        line-height: 0.8;
-        font-size: 70%;
-        margin: 10px 0;
-      }
-      h2 {
-        //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-        text-shadow: 2px 2px 2px $black_15;
-        line-height: 0.9;
-        font-size: 80%;
-        margin: 10px 0;
-      }
-    }
-  }
-  &:hover .slides-navigation a {
-    opacity: 0.3;
-  }
-}
+
 .home {
   background: $url_7 center center fixed;
   position: relative;
@@ -405,136 +330,7 @@ ul {
     }
   }
 }
-#navigation {
-  position: fixed;
-  width: 100%;
-  height: 75px;
-  z-index: 1031;
-  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-  transition: all 0.5s;
-  .mini-nav-button {
-    color: $color_tapa_approx;
-    display: none;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    font-size: 25px;
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    cursor: pointer;
-    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-    transform: translateY(-50%);
-    &:hover {
-      color: $color_curious_blue_approx;
-      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-      transition: all 0.3s;
-    }
-  }
-}
-.not-visible-nav {
-}
-.visible-nav {
-  top: 0;
-}
-.white-nav {
-  background: $white_90;
-  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-  box-shadow: 0 1px 4px $black_50;
-  li {
-    a {
-      &:hover {
-        background: $color_alto_approx;
-        color: $color_curious_blue_approx;
-      }
-      &:focus {
-        background: $color_curious_blue_approx;
-        color: $white !important;
-      }
-    }
-    &.active a {
-      color: $color_curious_blue_approx;
-    }
-  }
-  .site-logo a.logo {
-    color: $color_woodsmoke_approx;
-    display: block;
-  }
-}
-.dark-nav {
-  background: $black_60;
-  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-  box-shadow: 0 1px 4px $black_50;
-  ul {
-    &.dropdown-menu {
-      background: $black_90 !important;
-      li a {
-        color: $white;
-        &:hover {
-          border: none;
-          background: $color_storm_dust_25_approx;
-        }
-      }
-    }
-    &.nav ul.dropdown-menu li a {
-      color: $color_celeste_approx;
-    }
-  }
-  .site-logo a.logo {
-    color: $white;
-    display: block;
-  }
-  .nav li {
-    a {
-      color: $color_celeste_approx;
-      &:hover {
-        background: $color_log_cabin_approx;
-        color: $color_curious_blue_approx;
-      }
-      &:focus {
-        background: $color_curious_blue_approx;
-        color: $white !important;
-      }
-    }
-    &.active a {
-      color: $color_curious_blue_approx;
-    }
-  }
-}
-.soft-nav {
-  background: $white_5;
-}
-.nav-inner {
-  width: 100%;
-  max-width: 1170px;
-  height: 100%;
-  margin: 0 auto;
-  &:after {
-    clear: both;
-  }
-}
-.site-logo {
-  font-size: 3.5em;
-  float: left;
-  position: relative;
-  padding-top: 8px;
-  top: 50%;
-  //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-  transform: translateY(-50%);
-  a.logo img {
-    height: auto;
-    max-height: 189px;
-    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-    transition: all 1s;
-  }
-}
-.nav-menu {
-  float: right;
-  height: 100%;
-  ul.nav {
-    height: 100%;
-  }
-}
+
 .bio-box {
   text-align: center;
   margin: 0 auto 0;
@@ -698,50 +494,7 @@ ul {
 #features {
   background: $color_mine_shaft_approx $url_6 repeat;
 }
-.static-content-02 {
-  background: $url_18 center center fixed;
-  padding: 70px 0;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
-  .flex-direction-nav {
-    width: 52px;
-    height: 300px;
-    margin: -35px auto 0 auto;
-    position: relative;
-    opacity: 1;
-    li {
-      display: block;
-      position: relative;
-      float: left;
-      width: 26px;
-      height: 26px;
-      a {
-        opacity: 1;
-        width: 26px;
-        height: 26px;
-        background: $url_19;
-        &.flex-prev {
-          background-position: left top;
-          left: -5px;
-          &:hover {
-            background-position: left bottom;
-          }
-        }
-        &.flex-next {
-          background-position: right top;
-          right: -5px;
-          &:hover {
-            background-position: right bottom;
-          }
-        }
-      }
-    }
-    a:before {
-      display: none;
-    }
-  }
-}
+
 .t-slides {
   max-width: 970px;
   margin: 0 auto;
@@ -1350,13 +1103,7 @@ ul {
     }
   }
 }
-#static-content-01 {
-  background: $color_mine_shaft_approx $url_6 repeat;
-  .static-content-01 .facts .fact {
-    height: 150px;
-    padding: 0;
-  }
-}
+
 ::-webkit-input-placeholder {
   color: $color_dove_gray_approx;
 }
@@ -1418,26 +1165,8 @@ ul {
     }
   }
 }
-.footer {
-  padding: 45px;
-  text-align: center;
-  background: $color_log_cabin_approx;
-  h2.company-name {
-    margin-top: 0;
-    padding-top: 0;
-    font-size: 35px;
-  }
-  p.copyright {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    padding-top: 15px;
-    color: $color_mountain_mist_approx;
-    font-size: 14px;
-    a:hover {
-      color: $color_curious_blue_approx;
-    }
-  }
-}
+
+
 .page_header_inner {
   width: 100%;
   max-width: 1170px;

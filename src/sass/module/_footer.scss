@@ -1,0 +1,20 @@
+.footer {
+  padding: 45px;
+  text-align: center;
+  background: $color_log_cabin_approx;
+  h2.company-name {
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 35px;
+  }
+  p.copyright {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 15px;
+    color: $color_mountain_mist_approx;
+    font-size: 14px;
+    a:hover {
+      color: $color_curious_blue_approx;
+    }
+  }
+}

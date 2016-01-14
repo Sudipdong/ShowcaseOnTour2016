@@ -1,0 +1,44 @@
+.static-content-02 {
+  background: $url_18 center center fixed;
+  padding: 70px 0;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  .flex-direction-nav {
+    width: 52px;
+    height: 300px;
+    margin: -35px auto 0 auto;
+    position: relative;
+    opacity: 1;
+    li {
+      display: block;
+      position: relative;
+      float: left;
+      width: 26px;
+      height: 26px;
+      a {
+        opacity: 1;
+        width: 26px;
+        height: 26px;
+        background: $url_19;
+        &.flex-prev {
+          background-position: left top;
+          left: -5px;
+          &:hover {
+            background-position: left bottom;
+          }
+        }
+        &.flex-next {
+          background-position: right top;
+          right: -5px;
+          &:hover {
+            background-position: right bottom;
+          }
+        }
+      }
+    }
+    a:before {
+      display: none;
+    }
+  }
+}
