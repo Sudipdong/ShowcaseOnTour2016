@@ -293,9 +293,9 @@ ul.dropdown-menu li a:hover {
   opacity: 0.3; }
 
 #slides .slides-container div {
-  background-position: center center;
+  background-position: center center no-repeat;
   background-attachment: fixed;
-  background-size: 100%; }
+  background-size: cover; }
 
 #slides .slides-container .image1 {
   background-image: url(../images/box-08.jpg); }

@@ -1,8 +1,9 @@
 #slides .slides-container {
   div {
-    background-position: center center;
+    background-position: center center no-repeat;
     background-attachment: fixed;
-    background-size: 100%;
+    // background-size: 100%;
+    background-size: cover;
   }
   .image1 {
     background-image: $url_10;
