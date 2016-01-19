@@ -772,14 +772,14 @@ ul.dropdown-menu li a:hover {
     line-height: 120px;
     transition: all 0.3s; }
 
-#signup {
+#profile {
   background: url(../images/bg-04.jpg) center fixed;
   padding: 10px 0 10px; }
 
-.signup-text {
+.profile-text {
   margin: 45px auto; }
 
-#signup .signup-form {
+#profile .profile-form {
   width: 90%;
   max-width: 830px;
   margin: 0 auto;
