@@ -830,7 +830,7 @@ ul.tables li.tour-table {
 .table-inner ul.tour-events li.tour-event:first-child {
   border-top: 0px solid #f3f3f3; }
 
-.table-inner a.price-buy-now {
+.table-inner a.tour-more-btn {
   padding: 10px 15px;
   background: #35cc75;
   display: block;
@@ -844,7 +844,7 @@ ul.tables li.tour-table {
   -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1); }
 
-.table-inner a.price-buy-now i {
+.table-inner a.tour-more-btn i {
   padding-left: 5px; }
 
 /* Active Table */
@@ -853,7 +853,7 @@ ul.tables li.tour-table {
   color: #35cc75; }
 
 /* Table Rollovers */
-.table-inner a.price-buy-now:hover {
+.table-inner a.tour-more-btn:hover {
   background: #222;
   color: white; }
 
