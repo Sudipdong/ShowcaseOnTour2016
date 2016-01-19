@@ -357,6 +357,113 @@
   }
 }
 
+/* Pricing Tables */
+ .min-height-70 {
+    min-height: 70px;
+  }
+    
+  ul.tables{
+    margin:70px auto 0;
+  }
+
+  ul.tables li.pricing-table{
+    cursor: default;
+  }
+
+  .table-inner{
+    width:100%;
+    padding:15px;
+    position: relative;
+    background:#f9f9f9;
+    border:1px solid #dddddd;
+    box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+  }
+
+  .pricing-table .price-table-top{
+    width:100%;
+    padding:0;
+  }
+
+/* Pricing Table Header */
+
+  .pricing-table .price-table-top h3{
+    font-size:30px;
+    text-align: center;
+    width: 100%;
+    margin-left:-15px;
+    padding:15px 0px 10px 0px;
+    box-shadow: 0px 1px 4px rgba(0,0,0, 0.4);
+    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.4);
+    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.4);
+  }
+
+/* Pricing Table Image */
+
+  .price-table-img{
+    width: 100%;
+    height: auto;
+    background:#404040;
+    overflow: hidden
+  }
+
+  .price-table-top a.price-table-img img{
+    width: 100%;
+  }
+
+/* Price Plans */
+
+  .table-inner ul.price-plans{
+    margin:0px 0 0;
+    padding:20px 0 0;
+    color:#111111;
+  }
+
+  .table-inner ul.price-plans li.price-plan{
+    padding:15px;
+    border-bottom:1px solid #dddddd;
+
+
+  }
+
+  .table-inner ul.price-plans li.price-plan:first-child{
+    border-top:0px solid #f3f3f3;
+  }
+
+  .table-inner a.price-buy-now{
+    padding:10px 15px;
+    background:#35cc75;
+    display: block;
+    width:120px;
+    margin:20px auto;
+    border-radius:3px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+  }
+  
+  .table-inner a.price-buy-now i{
+    padding-left:5px;
+  }
+
+/* Active Table */
+
+  .prices .tables .active .price-table-top .price-circle p.price,
+  .prices .tables .active .price-table-top .price-circle p.timely{
+    color:#35cc75;
+  }
+
+/* Table Rollovers */
+
+  .table-inner a.price-buy-now:hover{
+    background:#222;
+    color:white;
+  }
+
 #profile {
   background:$url_30 center fixed;
   padding:10px 0 10px;
