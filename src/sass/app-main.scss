@@ -357,112 +357,94 @@
   }
 }
 
-/* Pricing Tables */
- .min-height-70 {
-    min-height: 70px;
-  }
-    
-  ul.tables{
-    margin:70px auto 0;
-  }
-
-  ul.tables li.tour-table{
-    cursor: default;
-  }
-
-  .table-inner{
-    width:100%;
-    padding:15px;
-    position: relative;
-    background:#f9f9f9;
-    border:1px solid #dddddd;
-    box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
-    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
-    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
-  }
-
-  .tour-table .tour-table-top{
-    width:100%;
-    padding:0;
-  }
-
-/* Pricing Table Header */
-
-  .tour-table .tour-table-top h3{
-    font-size:30px;
-    text-align: center;
-    width: 100%;
-    margin-left:-15px;
-    padding:15px 0px 10px 0px;
-    box-shadow: 0px 1px 4px rgba(0,0,0, 0.4);
-    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.4);
-    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.4);
-  }
-
-/* Pricing Table Image */
-
-  .tour-table-img{
-    width: 100%;
-    height: auto;
-    background:#404040;
-    overflow: hidden
-  }
-
-  .tour-table-top a.tour-table-img img{
-    width: 100%;
-  }
-
-/* Price Plans */
-
-  .table-inner ul.tour-events{
-    margin:0px 0 0;
-    padding:20px 0 0;
-    color:#111111;
-  }
-
-  .table-inner ul.tour-events li.tour-event{
-    padding:15px;
-    border-bottom:1px solid #dddddd;
-
-
-  }
-
-  .table-inner ul.tour-events li.tour-event:first-child{
-    border-top:0px solid #f3f3f3;
-  }
-
-  .table-inner a.tour-more-btn{
-    padding:10px 15px;
-    background:#35cc75;
-    display: block;
-    width:120px;
-    margin:20px auto;
-    border-radius:3px;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
-    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
-    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
-  }
+// Tour section: 
+.min-height-70 {
+  min-height: 70px;
+}
   
-  .table-inner a.tour-more-btn i{
-    padding-left:5px;
-  }
+ul.tables{
+  margin:70px auto 0;
+}
 
-/* Active Table */
+ul.tables li.tour-table{
+  cursor: default;
+}
 
-  .tours .tables .active .tour-table-top .price-circle p.price,
-  .tours .tables .active .tour-table-top .price-circle p.timely{
-    color:#35cc75;
-  }
+.table-inner{
+  width:100%;
+  padding:15px;
+  position: relative;
+  background:#f9f9f9;
+  border:1px solid #dddddd;
+  box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+  -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+  -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+}
 
-/* Table Rollovers */
+.tour-table .tour-table-top{
+  width:100%;
+  padding:0;
+}
 
-  .table-inner a.tour-more-btn:hover{
-    background:#222;
-    color:white;
-  }
+.tour-table .tour-table-top h3{
+  font-size:30px;
+  text-align: center;
+  width: 100%;
+  margin-left:-15px;
+  padding:15px 0px 10px 0px;
+  box-shadow: 0px 1px 4px rgba(0,0,0, 0.4);
+  -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.4);
+  -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.4);
+}
+
+.tour-table-img{
+  width: 100%;
+  height: auto;
+  background:#404040;
+  overflow: hidden
+}
+
+.tour-table-top a.tour-table-img img{
+  width: 100%;
+}
+
+.table-inner ul.tour-events{
+  margin:0px 0 0;
+  padding:20px 0 0;
+  color:#111111;
+}
+
+.table-inner ul.tour-events li.tour-event{
+  padding:15px;
+  border-bottom:1px solid #dddddd;
+}
+
+.table-inner ul.tour-events li.tour-event:first-child{
+  border-top:0px solid #f3f3f3;
+}
+
+.table-inner a.tour-more-btn{
+  padding:10px 15px;
+  display: block;
+  width:120px;
+  margin:20px auto;
+  border-radius:3px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+  -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+  -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+}
+
+.table-inner a.tour-more-btn i{
+  padding-left:5px;
+}
+
+.table-inner a.tour-more-btn:hover{
+  background:#222;
+  color:white;
+}
 
 #profile {
   background:$url_30 center fixed;

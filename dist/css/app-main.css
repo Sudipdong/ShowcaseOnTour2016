@@ -772,7 +772,6 @@ ul.dropdown-menu li a:hover {
     line-height: 120px;
     transition: all 0.3s; }
 
-/* Pricing Tables */
 .min-height-70 {
   min-height: 70px; }
 
@@ -796,7 +795,6 @@ ul.tables li.tour-table {
   width: 100%;
   padding: 0; }
 
-/* Pricing Table Header */
 .tour-table .tour-table-top h3 {
   font-size: 30px;
   text-align: center;
@@ -807,7 +805,6 @@ ul.tables li.tour-table {
   -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4); }
 
-/* Pricing Table Image */
 .tour-table-img {
   width: 100%;
   height: auto;
@@ -817,7 +814,6 @@ ul.tables li.tour-table {
 .tour-table-top a.tour-table-img img {
   width: 100%; }
 
-/* Price Plans */
 .table-inner ul.tour-events {
   margin: 0px 0 0;
   padding: 20px 0 0;
@@ -832,7 +828,6 @@ ul.tables li.tour-table {
 
 .table-inner a.tour-more-btn {
   padding: 10px 15px;
-  background: #35cc75;
   display: block;
   width: 120px;
   margin: 20px auto;
@@ -847,12 +842,6 @@ ul.tables li.tour-table {
 .table-inner a.tour-more-btn i {
   padding-left: 5px; }
 
-/* Active Table */
-.tours .tables .active .tour-table-top .price-circle p.price,
-.tours .tables .active .tour-table-top .price-circle p.timely {
-  color: #35cc75; }
-
-/* Table Rollovers */
 .table-inner a.tour-more-btn:hover {
   background: #222;
   color: white; }
