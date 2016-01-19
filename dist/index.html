@@ -50,7 +50,7 @@
 
 					<li><a href="#bio" class="scroll">Bio</a></li>
 
-					<li><a href="#">SignUp | SignIn</a></li>
+					<li><a href="#signup">SignUp | SignIn</a></li>
 				</ul>
 		  </div>
 		</div>
@@ -734,6 +734,37 @@
 				<a href="#home" class="scroll top-button">
 					<i class="fa fa-chevron-up"></i>
 				</a>
+			</div>
+		</div>
+	</section>
+
+	<section id="signup" class="layout-section-container parallax4">
+		<div class="inner signup">
+			<div class="signup-form">
+      	<h4 class="header light gray3 fancy"><span class="colored">Sign</span> Up</h4>
+        <p class="h-desc gray4">Why don't you sign up? If you have any questions, <br />
+        please call us a call at <span class="bold colored">+1 (800) 555-1010.</span></p>
+
+				<form id="signup-form" method="post" action="">
+					<div class="col-xs-6 animated" data-animation="fadeInLeft" data-animation-delay="300">
+						<input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
+						<input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
+						<input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" />
+					</div>
+					<div class="col-xs-6 animated" data-animation="fadeInRight" data-animation-delay="300">
+						<textarea name="message" id="message" class="form textarea"  placeholder="Message"></textarea>
+					</div>
+					<div class="relative fullwidth col-xs-12">
+						<button type="submit" id="submit" name="submit" class="form-btn semibold">Submit</button> 
+					</div>
+					<div class="clear"></div>
+				</form>
+
+				<div class="form-reply-area">
+					<div class="alert gray-bg reply-message not-visible-reply">
+						<strong>Thank You !</strong> Your request has been submitted.
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
