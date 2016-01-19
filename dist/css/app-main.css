@@ -779,7 +779,7 @@ ul.dropdown-menu li a:hover {
 ul.tables {
   margin: 70px auto 0; }
 
-ul.tables li.pricing-table {
+ul.tables li.tour-table {
   cursor: default; }
 
 .table-inner {
@@ -792,12 +792,12 @@ ul.tables li.pricing-table {
   -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1); }
 
-.pricing-table .price-table-top {
+.tour-table .price-table-top {
   width: 100%;
   padding: 0; }
 
 /* Pricing Table Header */
-.pricing-table .price-table-top h3 {
+.tour-table .price-table-top h3 {
   font-size: 30px;
   text-align: center;
   width: 100%;
