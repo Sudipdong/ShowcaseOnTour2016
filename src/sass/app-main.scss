@@ -381,14 +381,14 @@
     -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
   }
 
-  .tour-table .price-table-top{
+  .tour-table .tour-table-top{
     width:100%;
     padding:0;
   }
 
 /* Pricing Table Header */
 
-  .tour-table .price-table-top h3{
+  .tour-table .tour-table-top h3{
     font-size:30px;
     text-align: center;
     width: 100%;
@@ -408,7 +408,7 @@
     overflow: hidden
   }
 
-  .price-table-top a.price-table-img img{
+  .tour-table-top a.price-table-img img{
     width: 100%;
   }
 
@@ -452,8 +452,8 @@
 
 /* Active Table */
 
-  .prices .tables .active .price-table-top .price-circle p.price,
-  .prices .tables .active .price-table-top .price-circle p.timely{
+  .tours .tables .active .tour-table-top .price-circle p.price,
+  .tours .tables .active .tour-table-top .price-circle p.timely{
     color:#35cc75;
   }
 
