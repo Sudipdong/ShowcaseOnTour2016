@@ -54,7 +54,7 @@
 
 					<li><a href="#profile">Profile</a></li>
 
-					<li><a href="#">SignUp | SignIn</a></li>
+					<li><a href="#subscribe">SignUp | SignIn</a></li>
 				</ul>
 		  </div>
 		</div>
@@ -932,6 +932,196 @@
 		</div>
 	</section>
 	
+	<section id="subscribe" class="layout-section-container">
+		<div class="inner subscribe">
+			<div class="subscribe-form">
+				<div class="row">
+			    	<div class="col-xs-12"><h2> STEP 1	</h2> </div>
+				</div>
+
+				<div class="row">
+				  <form id="SubscribeBootstrapOneForm_form" accept-charset="utf-8" enctype="application/x-www-form-urlencoded" action="#" method="post">
+				  <input type="hidden" name="formName" value="SubscribeBootstrapOneForm" id="formName" />
+				    
+				    <div class="col-xs-12 col-sm-6">
+					  <div class="row form-element-container">
+					    
+					    <div class="col-xs-12">
+					      <h2 class="section-heading">Packages</h2>
+					    </div>
+
+						<div class="col-xs-12 tmot-fanclub-purchase-offer">
+						  <ul class="list-unstyled">
+						    <li>
+							  <label for="offer-TMCFAB15">
+							    <input type="radio" name="offer" id="offer-TMCFAB15" value="TMCFAB15" checked="checked" placeholder="Offer" required="required" class="form-control" />
+								<span class='offer-label-text'>Premium McGrawFan Membership</span>
+								<span class='offer-label-price'>$20.99</span>
+							  </label>		<!-- StaticContent | Name:offer_tmcfab15 | -->
+								
+							  <div class="row tmot-package-purchase-offer-content">
+							    <div class="col-xs-12 col-md-4">
+								  <img class="img-responsive" src="http://i825.photobucket.com/albums/zz178/lowspark3/logo-2015-black.png" />
+								</div>
+
+								<div class="col-xs-12 col-md-8">
+								  <ul>
+								    <li>Access to ticket pre-sales for Tim&#39;s 2016&nbsp;tour</li>
+									<li>All access to the McGrawFAN site with opportunities for giveaways, and special Tim events.</li>
+									<li>Full Access to the Members-Only Message Board</li>
+									<li>Photo of Tim and McGrawFAN membership card</li>
+								  </ul>
+							    </div>
+							  </div>
+
+							  <p>&nbsp;</p>
+
+							  <center>
+							    <img alt=" photo tour250.png" class="img-responsive" src="http://timmcgraw.com/wp-content/uploads/2015/05/animated11.gif" style="border-width: 0px; border-style: solid;" />
+							  </center>
+
+							  <p>&nbsp;</p>
+
+							  <p>&nbsp;</p>
+						    </li>
+						  </ul>
+						</div>
+
+					  </div>
+				    </div>
+
+				    <div class="col-xs-12 col-sm-6">
+					  <div class="row form-element-container">
+					    
+					    <div class="col-xs-12">
+						  <h2 class="section-heading">Subscription</h2>
+					    </div>
+
+					    <div class="col-md-12 tmot-md-12 tmot-fanclub-purchase-facebook">
+
+						  <p class="hint">
+						    <div class="tmot-form-message">		<!-- MessageContent | Name:content_above_form_step1 | -->	<!-- body-->
+							</div>
+						    <div class='tmot-fb-subscription'>
+							  <div id='facebookconnect'>
+							    <div class='fb-connect-button' onClick='fb_connect()'>
+								  <img class='img-responsive' src='http://media.mcgrawfan.com/images/facebook-banner-001.png' />
+								</div>
+								
+								<h5>
+								<!-- MessageContent | Name:facebook_connect_message | -->
+								<!--4 inactive FB user 
+								You have already given permission to FB    			-->
+								  <div class='fb-connect-message'>
+								    <div class='div-label text-fb-blue'>								  Connect with Facebook (Recommended)
+									</div>
+								    <ul class='disc-list'>
+									  <li> One-click log in.</li>
+									  <li> Share content with your friends.</li>
+								    </ul>
+								  </div>
+							    </h5>
+							    <div class='clear-both'></div>
+							  </div>
+						    </div>
+						    <img class="img-responsive tmot-divider-vertical-space tmot-login-divider" src="http://www.mcgrawfan.com/images/header-border.png" alt="">
+							
+							<div class="row">
+							  <div class="col-xs-12 text-center">
+							    <span class="tmot-divider-text">OR</span>
+							  </div>
+						    </div>
+						  </p>
+
+					    </div>
+
+					    <div class="col-xs-12">
+						  <div class="form-group">
+						    <label for="username" class="control-label required">User Name</label>
+							<input type="text" name="username" id="username" value="" placeholder="User Name" required="required" pattern="^[a-z][a-z0-9_]{2,}" errorRef="username" class="form-control" />
+						  </div>
+					    </div>
+
+						<div class="col-xs-12">
+						  <div class="form-group">
+						    <label for="email" class="control-label required">Email Address</label>
+							<input type="email" name="email" id="email" value="" placeholder="Email Address" required="required" partner="verify_email" errorRef="email" class="form-control" />
+						  </div>
+						</div>
+						
+						<div class="col-xs-12">
+						  <div class="form-group">
+						    <label for="verify_email" class="control-label required">Email Address Confirmation</label>
+						    <input type="email" name="verify_email" id="verify_email" value="" placeholder="Email Address Confirmation" required="required" autocomplete="off" match="email" partner="email" errorRef="email" class="form-control" />
+						  </div>
+						</div>
+
+						<div class="col-xs-12">
+						  <div class="form-group">
+						    <label for="password" class="control-label required"><span>Password</span></label>
+						    <input type="password" name="password" id="password" value="" placeholder="Password" required="required" autocomplete="off" pattern=".{3,}" errorRef="password" partner="verify_password" class="form-control" />
+						  </div>
+						</div>
+
+						<div class="col-xs-12">
+						  <div class="form-group">
+						    <label for="verify_password" class="control-label required">Password Confirmation</label>
+						    <input type="password" name="verify_password" id="verify_password" value="" placeholder="Password Confirmation" required="required" errorRef="password" autocomplete="off" match="password" partner="password" class="form-control" />
+						  </div>
+						</div>
+						
+						<div class="col-xs-12">
+						  <div class="form-group">
+						    <label for="country" class="control-label required">Country</label>
+						    <select name="country" id="country" onchange="getStatesList(this.value);" placeholder="Country" required="required" errorRef="country_state" class="form-control">
+							  <option value="" label="Country" selected="selected">Country</option>
+							  <option value="2" label="United Arab Emirates">United Arab Emirates</option>
+							  <option value="76" label="United Kingdom">United Kingdom</option>
+							  <option value="230" label="United States">United States</option>
+							  <option value="245" label="Zambia">Zambia</option>
+							  <option value="246" label="Zimbabwe">Zimbabwe</option>
+						    </select>
+						  </div>
+						</div>
+
+						<div class="col-xs-12">
+						  <div class="form-group">
+						    <label for="zip" class="control-label required">ZIP Code / Postal Code</label>
+						    <input type="text" name="zip" id="zip" value="" placeholder="ZIP Code / Postal Code" required="required" partner="city" errorRef="city_code" class="form-control" />
+						  </div>
+						</div>
+
+						<div class="col-xs-12">
+						  <div class="form-group">
+						    <label for="birthDay" class="control-label required">Date of Birth (MM/DD/YYYY)</label>
+						    <input type="text" name="birthDay" id="birthDay" value="" placeholder="Date of Birth (MM/DD/YYYY)" errorRef="birthDay" class="form-control" />
+						  </div>
+						</div>
+
+						<div class="col-xs-12">
+						  <div class="checkbox">
+						    <label class="checkbox-inline">
+						    <input type="hidden" name="tos" value="0" />
+						    <input type="checkbox" name="tos" id="tos" value="1" required="required" />
+						    <p class="hint">I agree to the <a href="#">Terms and Conditions</a></p>
+						    </label>
+						  </div>
+						</div>
+
+						<div class="col-xs-12">
+						  <input type="submit" name="proceed" id="proceed" value="Next" class="btn btn-primary" />
+						</div>
+
+					  </div>
+				    </div>
+
+				  </form>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
 	<footer class="footer">
 		<img src="images/ln-logo-small.png" alt="Logo" />
 		<p class="copyright normal">© 2015 <span class="colored">Live Nation.</span> All Rights Reserved.</p>
